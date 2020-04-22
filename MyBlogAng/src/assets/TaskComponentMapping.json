@@ -1,0 +1,34 @@
+[
+
+  {
+    "TaskCode": "EMC_CREATE_RENEWAL_SVC_GLOBAL",
+    "ComponentSelector": "emc-create-renewal-svc-global",
+    "ComponentName": "EmcCreateRenewalSvcGlobalComponent",
+    "UserCanNotCreateRequest": false
+  },
+  {
+    "TaskCode": "EMC_UPDATE_RENEWAL_SVC_GLOBAL",
+    "ComponentSelector": "emc-update-renewal-svc-global",
+    "ComponentName": "EmcUpdateRenewalSvcGlobalComponent",
+    "UserCanNotCreateRequest": false
+  },
+  {
+    "TaskCode": "GLOBAL_DELL_OUTLET_FGA",
+    "ComponentSelector": "gdo-fga",
+    "ComponentName": "GdoFgaComponent",
+    "UserCanNotCreateRequest": true
+  },
+
+  {
+    "TaskCode": "GDO_CHASSIS",
+    "ComponentSelector": "gdo-chassis",
+    "ComponentName": "GdoChassisComponent",
+    "UserCanNotCreateRequest": false
+  },
+  {
+    "TaskCode": "GDO_CHASSIS_OPTION",
+    "ComponentSelector": "gdo-chassis-option",
+    "ComponentName": "GdoChassisOptionComponent",
+    "UserCanNotCreateRequest": false
+  }
+]

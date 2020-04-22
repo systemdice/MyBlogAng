@@ -1,16 +1,24 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
-
 export const environment = {
-  production: false
-};
+  production: false,
+  ge1: false,
+  ge2: false,
+  ge4: false,
+  dev: true,
+  perf: false,
 
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+  securityApi: 'https://productmdm-security-api-dev.ausvdc02.pcf.dell.com',
+  masterDataApi: 'https://productmdm-masterdata-api-dev.ausvdc02.pcf.dell.com',
+  workflowManagerApi: 'https://productmdm-workflowmanager-api-dev.ausvdc02.pcf.dell.com',
+  materialApi: 'https://productmdm-material-api-dev.ausvdc02.pcf.dell.com',
+
+  itemApi: 'https://productmdm-item-api-dev.ausvdc02.pcf.dell.com',
+  gdossiApi: 'https://productmdm-gdossi-api-dev.ausvdc02.pcf.dell.com',
+  chassisApi: 'https://productmdm-chassis-api-dev.ausvdc02.pcf.dell.com',
+  emailApi: 'https://productmdm-email-api-dev.ausvdc02.pcf.dell.com',
+
+  apiVersion: '1.0',
+  appName: 'Product Master',
+
+  environmentName:'dev'
+};
+//# sourceMappingURL=environment.js.map

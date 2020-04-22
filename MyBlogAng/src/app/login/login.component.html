@@ -1,0 +1,61 @@
+<style>
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100%;
+    border: 4px solid #c3c3c3;
+    position: relative;
+    left: 25%;
+  }
+
+    .form-container > * {
+      width: 100%;
+    }
+ 
+</style>
+<h2>Login</h2>
+<hr/>
+<div class="form-container" >
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div >
+      <mat-form-field class="example-full-width">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Ex. Tapaswini" value="Sushi" formControlName="username" required [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+
+      </mat-form-field>
+      <!--<label for="username">Username</label>
+      <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+      <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+        <div *ngIf="f.username.errors.required">Username is required</div>
+      </div>-->
+    </div>
+    <div class="form-group">
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Ex. It makes me feel..." type="password" formControlName="password" required [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+      </mat-form-field>
+      <!--<label for="password">Password</label>
+      <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+      <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+        <div *ngIf="f.password.errors.required">Password is required</div>
+      </div>-->
+    </div>
+    <div class="form-group">
+      <button [disabled]="loading" class="btn btn-primary">Login</button>
+      <img *ngIf="loading" class="pl-3" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+      <a routerLink="/register" class="btn btn-link">Register</a>
+    </div>
+
+  </form>
+</div>

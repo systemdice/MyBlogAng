@@ -1,0 +1,1259 @@
+[
+
+  {
+    "TempSkuNum": "EMC-0000000024",
+    "MaterialNum": "000-0045-01",
+    "MaterialDesc": "HEAT SINK/CPU/1U/LGA771",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000025",
+    "MaterialNum": "000-0047-01",
+    "MaterialDesc": "SNAP RIVET/NYLON/BLACK",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000026",
+    "MaterialNum": "000-0049-01",
+    "MaterialDesc": "WIRE SADDLE/NYLON/ADHSIVE BASE/.375in SQ",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000027",
+    "MaterialNum": "000-0050-01",
+    "MaterialDesc": "SCRW/4-40x1.25in/TRUSS/PHIL/SS",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000028",
+    "MaterialNum": "000-0051-01",
+    "MaterialDesc": "WASHER/RETAINING/NYLON/no4/.265inx.062in",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000029",
+    "MaterialNum": "000-0052-01",
+    "MaterialDesc": "GASKET/EMI/CLIP-ON/BECU/.47in/ZC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000030",
+    "MaterialNum": "000-0053-01",
+    "MaterialDesc": "HEAT SINK/CPU/2U/LGA771/ALUMINUM",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000031",
+    "MaterialNum": "000-0054-01",
+    "MaterialDesc": "SCRW/NO 6X.375in/PH/PHIL/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000032",
+    "MaterialNum": "000-0055-01",
+    "MaterialDesc": "SCRW/10-32x.250in/FH/PHIL/UCUT/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000033",
+    "MaterialNum": "000-0055-02",
+    "MaterialDesc": "SCRW/10-32x.250in/FH/PHIL/UCUT/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000038",
+    "MaterialNum": "000-0062-01",
+    "MaterialDesc": "HEAT SINK/CPU/1U/LGA1366",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000039",
+    "MaterialNum": "000-0063-01",
+    "MaterialDesc": "INA HEAT SINK/IC/AL/1.0inSQx.50in/SPLAYD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000040",
+    "MaterialNum": "000-0063-02",
+    "MaterialDesc": "HEAT SINK/IC/AL/1.0inSQx.43in/SPLAYED",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000041",
+    "MaterialNum": "000-0065-01",
+    "MaterialDesc": "BALL SLIDE/ LINEAR/ .53H x 1.06W x 4.56L",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000042",
+    "MaterialNum": "000-0066-01",
+    "MaterialDesc": "STRT LINE ACTN CLMP/ 5/16-18 PLUNGR THRD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000043",
+    "MaterialNum": "000-0067-01",
+    "MaterialDesc": "SCRW/5/16-18 x 2.0IN/HEX/FULL-THRD/ST/ZN",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000044",
+    "MaterialNum": "000-0068-01",
+    "MaterialDesc": "NUT/5/16-18/HEX/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000045",
+    "MaterialNum": "000-0069-01",
+    "MaterialDesc": "STANDOFF/10-32/ 5/16IN HEX/ 5/8INL/ ALUM",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000046",
+    "MaterialNum": "000-0070-01",
+    "MaterialDesc": "SCRW/4-40x.437IN/PH/PHIL/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000047",
+    "MaterialNum": "000-0071-01",
+    "MaterialDesc": "SCRW/6-32x.375IN/PH/PHIL/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000048",
+    "MaterialNum": "000-0072-01",
+    "MaterialDesc": "SCRW/6-32x.500IN/PH/PHIL/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000049",
+    "MaterialNum": "000-0073-01",
+    "MaterialDesc": "SCRW/6-32x.500IN/HEX SOCKET/ST/BLK-OXIDE",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000050",
+    "MaterialNum": "000-0074-01",
+    "MaterialDesc": "NUT/6-32/HEX/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000051",
+    "MaterialNum": "000-0075-01",
+    "MaterialDesc": "SCRW/8-32x.500IN/PH/PHIL/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000052",
+    "MaterialNum": "000-0076-01",
+    "MaterialDesc": "SHLD SCRW/10-32/.25 DIA x.500L/HEX/STNLS",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000053",
+    "MaterialNum": "000-0077-01",
+    "MaterialDesc": "SPRNG PIN/SLOT/.125 DIA x .437L/STNLSS",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000054",
+    "MaterialNum": "000-0078-01",
+    "MaterialDesc": "SPRING PIN/SLOTTED/.250 DIA x 1.25L/ST",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000055",
+    "MaterialNum": "000-0079-01",
+    "MaterialDesc": "SCRW/10-32 x .625IN/PH/PHIL/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000056",
+    "MaterialNum": "000-0080-01",
+    "MaterialDesc": "STANDOFF/6-32 M/F/.25IN HEX/1.00INL/ALUM",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000057",
+    "MaterialNum": "000-0081-01",
+    "MaterialDesc": "SCRW/8-32x.500IN/FH/PHIL/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000058",
+    "MaterialNum": "000-0082-01",
+    "MaterialDesc": "NUT/8-32/HEX W/TOOTH LOCK WASHER/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000059",
+    "MaterialNum": "000-0083-01",
+    "MaterialDesc": "SHOULDER WASHER/ NO8 x .250L/ NYLON",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000060",
+    "MaterialNum": "000-0084-01",
+    "MaterialDesc": "SPCR/NO8 x.50 ODx.312L/NON-THREAD/NYLON",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000061",
+    "MaterialNum": "000-0085-01",
+    "MaterialDesc": "SCR/8-32x.375IN/PH/SEMS EX TTH LK WSH/ZN",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000062",
+    "MaterialNum": "000-0086-01",
+    "MaterialDesc": "SCR/8-32 x .750IN/PH/SEMS SQCN LK WSH/ZN",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000063",
+    "MaterialNum": "000-0087-01",
+    "MaterialDesc": "SHLD SCRW/10-32/.25 DIAx.312L/HEX/STNLS",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000064",
+    "MaterialNum": "000-0088-01",
+    "MaterialDesc": "MOUNTING CLIP, TITAN RACK FILLER PLATE",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000065",
+    "MaterialNum": "000-0089-01",
+    "MaterialDesc": "CABLE TIE, 8, UL94V-0",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000066",
+    "MaterialNum": "000-0090-01",
+    "MaterialDesc": "STRAP VELCRO 12in x1/2in ONE WRAP SLOT",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000067",
+    "MaterialNum": "000-0091-01",
+    "MaterialDesc": "SCRW/6-32x.187in/FH/PHIL/UCUT/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000068",
+    "MaterialNum": "000-0093-01",
+    "MaterialDesc": "GASKET/EMI/SNAP-ON/.11x.32x.187x2.97in",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000069",
+    "MaterialNum": "000-0094-01",
+    "MaterialDesc": "GASKET/EMI/SNAP-ON/.11x.32x.187x16.44in",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000070",
+    "MaterialNum": "000-0095-01",
+    "MaterialDesc": "SHLD SCRW/8-32/.187 DIAx.375L/HEX/STNLS",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000071",
+    "MaterialNum": "000-0096-01",
+    "MaterialDesc": "STANDOFF/10-32/ 1/2IN HEX/ 4INL/ STEEL",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000072",
+    "MaterialNum": "000-0097-01",
+    "MaterialDesc": "STNDOFF/SPCER/.625OD x .192IDx.250L/ALUM",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000073",
+    "MaterialNum": "000-0098-01",
+    "MaterialDesc": "SCRW/4-40x.688IN/PH/PHIL/SS",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000074",
+    "MaterialNum": "000-0099-01",
+    "MaterialDesc": "SCRW/4-40x.875IN/PH/PHIL/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000075",
+    "MaterialNum": "000-0100-01",
+    "MaterialDesc": "NUT/4-40/HEX/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000076",
+    "MaterialNum": "000-0101-01",
+    "MaterialDesc": "SCRW/8-32x.750IN/FH/PHIL/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000077",
+    "MaterialNum": "000-0102-01",
+    "MaterialDesc": "SCRW/10-32x.750IN/PH/PHIL/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000078",
+    "MaterialNum": "000-0103-01",
+    "MaterialDesc": "NUT/10-32/HEX W/CONICAL WASHER/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000079",
+    "MaterialNum": "000-0104-01",
+    "MaterialDesc": "SCRW/4-40x.500IN/PH/PHIL/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000080",
+    "MaterialNum": "000-0105-01",
+    "MaterialDesc": "SCRW,10-32 x .625,PH,W/SEMS SQCN LOCK",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000081",
+    "MaterialNum": "000-0106-01",
+    "MaterialDesc": "WASHER,LOCK,#8,EXTERNAL TOOTH,ST,ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000082",
+    "MaterialNum": "000-0107-01",
+    "MaterialDesc": "SCRW/M5x12mm/FH/PHIL/ST/ZINC/SELF TAP",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000083",
+    "MaterialNum": "000-0108-01",
+    "MaterialDesc": "HEAT SINK/1U/91.5mm SQ/EXTRUDED AL",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000084",
+    "MaterialNum": "000-0109-01",
+    "MaterialDesc": "HEAT SINK/2U/LGA2011/89.7mm SQ",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000085",
+    "MaterialNum": "000-0110-01",
+    "MaterialDesc": "SCRW/NO 3-24x.25in/PH/TORX/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000086",
+    "MaterialNum": "000-0111-01",
+    "MaterialDesc": "SCRW/M3x8mm/KA30 PT THREAD/OVAL HEAD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000087",
+    "MaterialNum": "000-0112-01",
+    "MaterialDesc": "SCRW/M4.8x1.6x12mm/FH/PHIL/ST/ZINC/ST",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000088",
+    "MaterialNum": "000-0113-01",
+    "MaterialDesc": "DIN 3 RAIL/7.5mm x 35mm x 1 MTR/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000089",
+    "MaterialNum": "000-0114-01",
+    "MaterialDesc": "SCRW/10-32x.250in/PH/PHIL/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000090",
+    "MaterialNum": "000-0115-01",
+    "MaterialDesc": "WASHER/LOCK/NO6/EXTERNAL TOOTH/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000091",
+    "MaterialNum": "000-0117-01",
+    "MaterialDesc": "STUD/10-32x.500in/PCB MOUNT/PEM",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000092",
+    "MaterialNum": "000-0119-01",
+    "MaterialDesc": "SCRW/10-32x.500in/PH/PHIL/SS",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000093",
+    "MaterialNum": "000-0120-01",
+    "MaterialDesc": "STNDOFF/8-32 M/F/.25IN HEX/.406INL/NYLON",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000094",
+    "MaterialNum": "000-0121-01",
+    "MaterialDesc": "NUT/8-32/HEX/ST/ZINC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000095",
+    "MaterialNum": "000-0122-01",
+    "MaterialDesc": "WSHR/NYLON/NO6/.312INOD x .093IN THK",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000096",
+    "MaterialNum": "0000076200001",
+    "MaterialDesc": "SELECT DATA ARCHIVE BASE",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000097",
+    "MaterialNum": "0000076220001",
+    "MaterialDesc": "SELECT ARCHIVE BRIDGE DOCUMENTUM",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000098",
+    "MaterialNum": "0000076230001",
+    "MaterialDesc": "SELECT ARCHIVE BRIDGE CENTERA",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000099",
+    "MaterialNum": "0000076260001",
+    "MaterialDesc": "SELCUMULATIVE DBSIZE GREAT500 GB LESS2TB",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000100",
+    "MaterialNum": "0000076270001",
+    "MaterialDesc": "SELECT CUMULATIVE DB SIZE 2 TB LESS 5 TB",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000104",
+    "MaterialNum": "0000076330001",
+    "MaterialDesc": "SELECT DATABASE CONNECTOR - ORACLE",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000105",
+    "MaterialNum": "0000076340001",
+    "MaterialDesc": "SELECT DATABASE CONNECTOR - SQL SERVER",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000106",
+    "MaterialNum": "0000076350001",
+    "MaterialDesc": "SELECT DATABASE CONNECTOR - MYSQL",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000113",
+    "MaterialNum": "0000076790001",
+    "MaterialDesc": "SELECT FILE ARCHIVE SERVICE",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000118",
+    "MaterialNum": "0000084450001",
+    "MaterialDesc": "SELECT ARCHIVE ACCELERATOR FOR SAP",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000122",
+    "MaterialNum": "0000109650001",
+    "MaterialDesc": "SELECT  Database Connector - DB2 AS/400",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000123",
+    "MaterialNum": "0000109980001",
+    "MaterialDesc": "SELECT Database Connector - ODBC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000124",
+    "MaterialNum": "0000109990001",
+    "MaterialDesc": "SELECT Database Connector - JDBC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000125",
+    "MaterialNum": "0000112550001",
+    "MaterialDesc": "SEL DATA REPLICATION TARGET APPLIANCE",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000126",
+    "MaterialNum": "0000113760001",
+    "MaterialDesc": "SEL DATA REPLICATION DB SOURCE CPU-CORES",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000127",
+    "MaterialNum": "0000113770001",
+    "MaterialDesc": "SEL DATA REPLICATION DB TARGET CPU-CORES",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000128",
+    "MaterialNum": "0000113780001",
+    "MaterialDesc": "SEL DATA REPLICATION DB SOURCE TARGET",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000129",
+    "MaterialNum": "0000113860001",
+    "MaterialDesc": "SEL DATA REPLICATION SOURCE TARGET APPL",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000130",
+    "MaterialNum": "0000113870001",
+    "MaterialDesc": "SEL DATA REPLICATION FLAT FILE TARGET",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000131",
+    "MaterialNum": "0000113880001",
+    "MaterialDesc": "SEL FAST CLONE DATABASE SINGLE CPU-CORE",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000132",
+    "MaterialNum": "0000113880011",
+    "MaterialDesc": "SEL Fast Clone 64 CPU-Core POC Bundle",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000133",
+    "MaterialNum": "0000113900001",
+    "MaterialDesc": "SEL FAST CLONE STREAMER OPTION-GREENPLUM",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000134",
+    "MaterialNum": "0000117320001",
+    "MaterialDesc": "SEL Fast Clone Base (4 Source CPU-cores)",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000135",
+    "MaterialNum": "0000117320002",
+    "MaterialDesc": "SEL Standard Support for 0000011732-0002",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000136",
+    "MaterialNum": "0000117320003",
+    "MaterialDesc": "SEL Enterprise Support- 0000011732-0003",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000137",
+    "MaterialNum": "0000117320006",
+    "MaterialDesc": "SEL Critical Support for 0000011732-0006",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000138",
+    "MaterialNum": "0000117330001",
+    "MaterialDesc": "SEL Fast Clone Database Single CPU-Core",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000139",
+    "MaterialNum": "0000117330002",
+    "MaterialDesc": "SEL Standard Support for 0000011733-0002",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000140",
+    "MaterialNum": "0000117330003",
+    "MaterialDesc": "SEL Enterprise Support - 0000011733-0003",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000141",
+    "MaterialNum": "0000117330006",
+    "MaterialDesc": "SEL Critical Support for 0000011733-0006",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000154",
+    "MaterialNum": "0000762000081",
+    "MaterialDesc": "SEL CRITICAL SUPPORT-26.75PCT OF LIC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000159",
+    "MaterialNum": "0000762002002",
+    "MaterialDesc": "SEL STANDARD SUPPORT FOR 0000113900001",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000160",
+    "MaterialNum": "0000762002003",
+    "MaterialDesc": "SEL STANDARD SUPPORT FOR 0000113760001",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000161",
+    "MaterialNum": "0000762002004",
+    "MaterialDesc": "SEL STANDARD SUPPORT FOR 0000113770001",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000162",
+    "MaterialNum": "0000762002005",
+    "MaterialDesc": "SEL STANDARD SUPPORT FOR 0000113780001",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000164",
+    "MaterialNum": "0000762002007",
+    "MaterialDesc": "SEL STANDARD SUPPORT FOR 0000113860001",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000196",
+    "MaterialNum": "0004767C",
+    "MaterialDesc": "DISK FAN ASSEMBLY FOR DELL",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000204",
+    "MaterialNum": "000627",
+    "MaterialDesc": "INA IC TTL SMD 74F245 8",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000215",
+    "MaterialNum": "000822",
+    "MaterialDesc": "RPAK BUS 102 95W G 100",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000251",
+    "MaterialNum": "001005592",
+    "MaterialDesc": "SCHEM 10 SLOT WIDE INTERCONN PCB",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000254",
+    "MaterialNum": "001005634",
+    "MaterialDesc": "SCHEM CLARIION DRIVE REGULATOR",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000261",
+    "MaterialNum": "001005666",
+    "MaterialDesc": "SCHEM LCC-DPE BOARD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000266",
+    "MaterialNum": "001005692",
+    "MaterialDesc": "SCHEM FAN FLT DETECTOR BOARD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000283",
+    "MaterialNum": "001005837",
+    "MaterialDesc": "SCHEM DUAL PROC MOTHERBD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000285",
+    "MaterialNum": "001005847",
+    "MaterialDesc": "SCHEM MOTHERBOARD 840",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000286",
+    "MaterialNum": "001005852",
+    "MaterialDesc": "SCHEM ISCIFI4 BOARD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000311",
+    "MaterialNum": "001005940",
+    "MaterialDesc": "INTL TRACKING NO. XPE TCP",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000317",
+    "MaterialNum": "001005946",
+    "MaterialDesc": "SCHEM EXTENDER DEBUG BOARD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000319",
+    "MaterialNum": "001005948",
+    "MaterialDesc": "INTERNAL TRACKING DAE DELL",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000334",
+    "MaterialNum": "001005963",
+    "MaterialDesc": "INTERNAL TRACKING KATANA DPE",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000350",
+    "MaterialNum": "001005979",
+    "MaterialDesc": "SCHEM OAK ISCSI TOE BOARD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000351",
+    "MaterialNum": "001005980",
+    "MaterialDesc": "SCHEM DOODLE SERIAL ATA DEBUG CARD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000352",
+    "MaterialNum": "001005981",
+    "MaterialDesc": "SCHEM CALLANDOR2 BOARD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000353",
+    "MaterialNum": "001005982",
+    "MaterialDesc": "SCHEM SI TEST MIDPLANE",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000354",
+    "MaterialNum": "001005983",
+    "MaterialDesc": "SCHEM CANOPY INTERCONNECT PCB, TARPON",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000355",
+    "MaterialNum": "001005984",
+    "MaterialDesc": "SCHEM PERSONALITY EXTENDER PCB, X2",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000356",
+    "MaterialNum": "001005985",
+    "MaterialDesc": "SCHEM TARPON UMBRELLA PCB",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000357",
+    "MaterialNum": "001005986",
+    "MaterialDesc": "SCHEM iLCC CONTROL CARD FOR INNOVATION",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000358",
+    "MaterialNum": "001005987",
+    "MaterialDesc": "SCHEM iMIDPLANE FOR INNOVATION",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000359",
+    "MaterialNum": "001005988",
+    "MaterialDesc": "SCHEM iPADDLE CARD FOR FC ON SLEDS",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000360",
+    "MaterialNum": "001005989",
+    "MaterialDesc": "SCHEM FICA PERSONALITY PCB",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000361",
+    "MaterialNum": "001005990",
+    "MaterialDesc": "SCHEM SATA PADDLE CARD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000362",
+    "MaterialNum": "001005991",
+    "MaterialDesc": "SCHEM, STORAGE PROCESSOR, CX200 PLUS",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000363",
+    "MaterialNum": "001005992",
+    "MaterialDesc": "SCHEM, GIGA SAN PERSONALITY PCB",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000364",
+    "MaterialNum": "001005993",
+    "MaterialDesc": "SCHEM, STORAGE PROCESSOR, CALLANDOR 533",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000365",
+    "MaterialNum": "001005994",
+    "MaterialDesc": "Schem LCC FOR 3U CHASSIS, KOTO PLUS",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000366",
+    "MaterialNum": "001005995",
+    "MaterialDesc": "SCHEM DAE2 NON-HA FILLER (NANOX)",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000367",
+    "MaterialNum": "001005996",
+    "MaterialDesc": "SCHEM LOW COST DUAL SATA SP FOR ATATUDE",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000368",
+    "MaterialNum": "001005997",
+    "MaterialDesc": "Schematic Low Cost SATA SP for ATAtude",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000369",
+    "MaterialNum": "001005998",
+    "MaterialDesc": "Schem SATA SP for Klondike",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000370",
+    "MaterialNum": "001005999",
+    "MaterialDesc": "SCHEM KAYAK PADDLE CARD FOR FC SLEDS",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000371",
+    "MaterialNum": "001006000",
+    "MaterialDesc": "Schem Innovatiion Debug Board (Dinghy)",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000372",
+    "MaterialNum": "001006001",
+    "MaterialDesc": "Schem Innovatiion Debug Board (Pontoon)",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000373",
+    "MaterialNum": "001006002",
+    "MaterialDesc": "SCHEM FIBRE FE PERSONALITY CARD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000374",
+    "MaterialNum": "001006003",
+    "MaterialDesc": "SCHEM FIBRE FE PERSONALITY CARD, ATA.",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000375",
+    "MaterialNum": "001006004",
+    "MaterialDesc": "SCHEM CX630 SAN PERSONALITY PCB",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000376",
+    "MaterialNum": "001006005",
+    "MaterialDesc": "Schem Innovatiion Load Board Load Board",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000377",
+    "MaterialNum": "001006006",
+    "MaterialDesc": "SCHEM INNOVATION DEBUG BOARD TO DISK (RU",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000378",
+    "MaterialNum": "001006007",
+    "MaterialDesc": "Schematic for Snapper SP",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000379",
+    "MaterialNum": "001006008",
+    "MaterialDesc": "Schem Extended Interconnect PCB, Tarpon",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000380",
+    "MaterialNum": "001006009",
+    "MaterialDesc": "SCHEM TOE personality card",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000381",
+    "MaterialNum": "001006010",
+    "MaterialDesc": "Schem Pecos, LED board for Piranha",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000382",
+    "MaterialNum": "001006011",
+    "MaterialDesc": "Schem Acorn iSCSI TOE Board",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000383",
+    "MaterialNum": "001006012",
+    "MaterialDesc": "Schem - Ajaguar 9 port NAS card",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000384",
+    "MaterialNum": "001006013",
+    "MaterialDesc": "Schem NS500 Aux FICA Personality CARD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000385",
+    "MaterialNum": "001006014",
+    "MaterialDesc": "Schematic NS500 Personality Card",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000386",
+    "MaterialNum": "001006015",
+    "MaterialDesc": "Schem Hammerhead Midplane (Zephyr)",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000387",
+    "MaterialNum": "001006016",
+    "MaterialDesc": "Schem Aspen NAS PERSONALITY PCB",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000388",
+    "MaterialNum": "001006017",
+    "MaterialDesc": "Schem Hammerhead CPU Blade (Wildfire)",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000389",
+    "MaterialNum": "001006018",
+    "MaterialDesc": "Dual 533Mhz FSB procs/memory Canopy Sche",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000390",
+    "MaterialNum": "001006019",
+    "MaterialDesc": "CX/NS 500 Motherboard Schem",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000391",
+    "MaterialNum": "001006020",
+    "MaterialDesc": "Schem Single SATA SP (Acadia2)",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000392",
+    "MaterialNum": "001006021",
+    "MaterialDesc": "Schematic Hammerhead JTAG Test Board (Pa",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000393",
+    "MaterialNum": "001006022",
+    "MaterialDesc": "Schem Scorpion Blade Motherboard",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000394",
+    "MaterialNum": "001006023",
+    "MaterialDesc": "Schem DOPPLER 80 PORT DEBUG CARD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000395",
+    "MaterialNum": "001006024",
+    "MaterialDesc": "Schem 3U KOTO PLUS LCC PCB,SYMM - RESPIN",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000396",
+    "MaterialNum": "001006025",
+    "MaterialDesc": "Schem 3U KOTO LCC PCB, CLARIION/SYMM - R",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000397",
+    "MaterialNum": "001006026",
+    "MaterialDesc": "Schem Grand Teton 2",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000398",
+    "MaterialNum": "001006027",
+    "MaterialDesc": "Schem for Yosemite Single SP",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000399",
+    "MaterialNum": "001006028",
+    "MaterialDesc": "Schem for Big Sur Dual SP",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000400",
+    "MaterialNum": "001006029",
+    "MaterialDesc": "Schem CX300I based on Canopy II",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000401",
+    "MaterialNum": "001006030",
+    "MaterialDesc": "Schem Hammerhead CPU Blade (Wildfire II)",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000402",
+    "MaterialNum": "001006031",
+    "MaterialDesc": "Schem LCC FOR 3U CHASSIS, KOTO PLUS, dep",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000403",
+    "MaterialNum": "001006032",
+    "MaterialDesc": "Schem Bigfoot SP",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000404",
+    "MaterialNum": "001006033",
+    "MaterialDesc": "Schem Hammerhead CPU Blade (Wildfire III",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000405",
+    "MaterialNum": "001006034",
+    "MaterialDesc": "Schem Hammerhead Midplane (Zephyr 2)",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000406",
+    "MaterialNum": "001006035",
+    "MaterialDesc": "Schem BIGFOOT DAE SAS EXPANSION BOARD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000407",
+    "MaterialNum": "001006036",
+    "MaterialDesc": "Schem Scorpion 2 Blade Motherboard",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000408",
+    "MaterialNum": "001006037",
+    "MaterialDesc": "Schem Scorpion 3 Motherboard",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000409",
+    "MaterialNum": "001006038",
+    "MaterialDesc": "Schem Hammerhead CPU Blade (Wildfire IV)",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000410",
+    "MaterialNum": "001006039",
+    "MaterialDesc": "Schematic Wildville (Wildfire with Paxvi",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000411",
+    "MaterialNum": "001006040",
+    "MaterialDesc": "Schematic Scor4 140-DOE for EMI/SI Evalu",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000412",
+    "MaterialNum": "001006041",
+    "MaterialDesc": "Schematic Tarantula Blade Motherboard",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000413",
+    "MaterialNum": "001006042",
+    "MaterialDesc": "Schematic Bigfoot SP Respin",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000414",
+    "MaterialNum": "001006043",
+    "MaterialDesc": "Schem Bigfoot Celia 2 LCC/SEB",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000415",
+    "MaterialNum": "001006044",
+    "MaterialDesc": "Schem FOGBOW MIDPLANE PCB",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000418",
+    "MaterialNum": "001024",
+    "MaterialDesc": "INA RPK BUS 202 95W G 100",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000421",
+    "MaterialNum": "0010250",
+    "MaterialDesc": "RSA RKM CONNECTRIX LICENSE",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000447",
+    "MaterialNum": "001440",
+    "MaterialDesc": "INA IC EEPROM 2KX8 200NS",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000455",
+    "MaterialNum": "001729",
+    "MaterialDesc": "INA RPK RES 102 75 WG 100",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000460",
+    "MaterialNum": "001760",
+    "MaterialDesc": "INA OSC,TTL,80MHZ,01%,4RMC",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000466",
+    "MaterialNum": "001901",
+    "MaterialDesc": "INA NUT2-56 HEX MACH STL",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000468",
+    "MaterialNum": "001939",
+    "MaterialDesc": "INA R TF 200/18/F 200",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000483",
+    "MaterialNum": "002-0003-01",
+    "MaterialDesc": "BUMPER/RUBBER/.37in DIAx.12in THK/BLACK",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000494",
+    "MaterialNum": "002-0021-02",
+    "MaterialDesc": "HEAT SPREADER/ ALUMINUM/ .50inx.70in",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000495",
+    "MaterialNum": "002-0022-01",
+    "MaterialDesc": "GASKET/EMI/D-SHAPED/.06inx.15inx2.50in",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000496",
+    "MaterialNum": "002-002216-000",
+    "MaterialDesc": "ED-6064 FAN MODULE",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000497",
+    "MaterialNum": "002-002259-000",
+    "MaterialDesc": "ED-6064 S-BAR ASSEMBLY",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000498",
+    "MaterialNum": "002-0023-01",
+    "MaterialDesc": "TAPE/FOAM/TWO SIDE ADHESIVE/.031inx.75in",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000499",
+    "MaterialNum": "002-002308-000",
+    "MaterialDesc": "4-PORT LONG WAVE PORT CARD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000500",
+    "MaterialNum": "002-002366-400",
+    "MaterialDesc": "ED-140M FAN FRU",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000501",
+    "MaterialNum": "002-0024-01",
+    "MaterialDesc": "GUARD/FAN/WIRE FORMED/60mm",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000502",
+    "MaterialNum": "002-002475-000",
+    "MaterialDesc": "ED-6064 S-BAR ASSEMBLY",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000503",
+    "MaterialNum": "002-002475-100",
+    "MaterialDesc": "ED-6064 S-BAR ASSEMBLY",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000504",
+    "MaterialNum": "002-002487-201",
+    "MaterialDesc": "ED-140M SBAR ASSY",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000505",
+    "MaterialNum": "002-002488-000",
+    "MaterialDesc": "ED-6064 FULLY POPULATED 64 PORTS LONG WA",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000506",
+    "MaterialNum": "002-002492-000",
+    "MaterialDesc": "ED-6064 FULLY POPULATED 64 PORTS LONG WA",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000507",
+    "MaterialNum": "002-0026-01",
+    "MaterialDesc": "FOAM STRIP/PSA/.20inx2.7inx0.062in",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000508",
+    "MaterialNum": "002-002667-001",
+    "MaterialDesc": "ED-140M SHORT WAVE UPM CARD",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000509",
+    "MaterialNum": "002-0027-01",
+    "MaterialDesc": "CBL CLAMP/ D-STYLE/ .50in SQ BASE W/PSA",
+    "LDellSkuNum": "LDellSkuNum"
+  },
+  {
+    "TempSkuNum": "EMC-0000000510",
+    "MaterialNum": "002-0028-01",
+    "MaterialDesc": "GROM RBBR/3-16INID X7-16INOD X 3-16INTHK",
+    "LDellSkuNum": "LDellSkuNum"
+  }
+
+
+]

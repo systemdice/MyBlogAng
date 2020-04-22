@@ -1,0 +1,233 @@
+<form [formGroup]="form">
+  
+
+  <div class="row">
+    <mat-tab-group class="full-width" color="primary" #tabGroup style="padding-left:30px;">
+      <mat-tab label="Sudent Inputs">
+      <div class="table-holder">
+  <div class="panel panel-info">
+    <div class="panel-heading">Student Registration</div>
+    <div class="panel-body">
+
+      <div class="row">
+        <div class="col-sm-3" style="background-color:aliceblue;">
+          <mat-form-field class="full-width">
+            <input matInput name="ServiceLevelId1" id="ServiceLevelId1" placeholder="Service Level ID">
+
+          </mat-form-field>
+        </div>
+        <div class="col-sm-3" style="background-color:aliceblue;">
+          <!--sel-{{selectedGame}}-->
+          <mat-radio-group name="language" [(ngModel)]="selectedGame" [ngModelOptions]="{standalone: true}" class="example-radio-group" (change)="onChange($event)">
+            <mat-radio-button class="example-radio-button" *ngFor="let lang of LANGUAGES" [value]="lang.id" [checked]>
+              {{lang.name}}
+            </mat-radio-button>
+          </mat-radio-group>
+          <button (click)="abc()"></button>
+        </div>
+        <div class="col-sm-6" style="background-color:aliceblue;">
+          <fieldset class="demo-fieldset">
+            <mat-list dense>
+              <mat-list-item>
+                <mat-checkbox [(ngModel)]="select_all" (ngModelChange)="onSelectAll($event)" [ngModelOptions]="{standalone: true}"></mat-checkbox>
+                <span fxFlex="5"></span>
+                <span>Select all</span>
+              </mat-list-item>
+
+              <ng-container *ngFor="let d of data;">
+                <mat-list-item>
+                  <mat-checkbox [(ngModel)]="d.is_selected" (ngModelChange)="onSelectAllIndividual(d.is_selected)" [ngModelOptions]="{standalone: true}"></mat-checkbox>
+                  <span fxFlex="5"></span>
+                  <span>
+                    {{ d.name }}-{{d.is_selected}}
+                  </span>
+                </mat-list-item>
+              </ng-container>
+            </mat-list>
+          </fieldset>
+        </div>
+      </div>
+      <div class="row" style="padding:3px;">
+        <div class="col-sm-3" style="background-color:aliceblue;">
+          <mat-form-field class="full-width">
+            <input type="text"
+                   placeholder="Pick one(AutoComplete)"
+                   aria-label="Number"
+                   matInput
+                   [formControl]="myControl"
+                   [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          <p>
+            Icon with a badge
+            <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+            <!-- Include text description of the icon's meaning for screen-readers -->
+            <span class="cdk-visually-hidden">
+              Example with a home icon with overlaid badge showing the number 15
+            </span>
+          </p>
+        </div>
+        <div class="col-sm-3" style="background-color:aliceblue;">
+          <mat-radio-group formControlName="gender" class="full-width">
+            <mat-radio-button class="mySelect" value="1">Male</mat-radio-button>
+            <mat-radio-button value="2">Female</mat-radio-button>
+            <mat-radio-button value="3">Other</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="col-sm-3" style="background-color:aliceblue;">
+          <!--<mat-select formControlName="department" placeholder="Department" class="full-width mySelect">
+            <mat-option>None</mat-option>
+            <ng-container *ngFor="let department of departments">
+              <mat-option value="{{department.id
+                          }}">{{department.value}}</mat-option>
+      </ng-container>
+                  </mat-select>-->
+        </div>
+        <div class="col-sm-3" style="background-color:aliceblue;">
+          <mat-form-field class="full-width">
+            <input formControlName="email" matInput placeholder="Email">
+          </mat-form-field>
+
+        </div>
+      </div>
+      <div class="row" style="padding:3px;">
+        <div class="col-sm-3" style="background-color:aliceblue;">
+          <mat-form-field class="full-width">
+            <input matInput name="ServiceLevelId1" id="ServiceLevelId1" placeholder="Service Level ID">
+
+          </mat-form-field>
+        </div>
+        <div class="col-sm-3" style="background-color:aliceblue;">
+          <mat-radio-group formControlName="gender" class="example-radio-group">
+            <mat-radio-button class="example-radio-button" value="1">Male</mat-radio-button>
+            <mat-radio-button class="example-radio-button" value="2">Female</mat-radio-button>
+            <mat-radio-button class="example-radio-button" value="3">Other</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="col-sm-3" style="background-color:aliceblue;">
+          <!--<mat-select formControlName="department" placeholder="Department" class="full-width">
+      <mat-option>None</mat-option>
+      <ng-container *ngFor="let department of departments">
+        <mat-option value="{{department.id}}">{{department.value}}</mat-option>
+      </ng-container>
+            </mat-select>-->
+        </div>
+        <div class="col-sm-3" style="background-color:aliceblue;">
+          <mat-form-field class="full-width">
+            <input formControlName="email" matInput placeholder="Email">
+          </mat-form-field>
+
+        </div>
+      </div>
+      <div class="row" style="padding:3px;">
+        <div class="col-sm-3" style="background-color:aliceblue;">
+          <mat-form-field>
+            <input formControlName="hireDate" matInput [matDatepicker]="picker" placeholder="Hire Date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-3" style="background-color:aliceblue;">
+          <mat-radio-group formControlName="gender" class="example-radio-group">
+            <mat-radio-button class="example-radio-button" value="1">Male</mat-radio-button>
+            <mat-radio-button class="example-radio-button" value="2">Female</mat-radio-button>
+            <mat-radio-button class="example-radio-button" value="3">Other</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="col-sm-3" style="background-color:aliceblue;">
+          <mat-checkbox class="example-radio-group" formControlName="isPermanent">Permanent Employee</mat-checkbox>
+        </div>
+        <div class="col-sm-3" style="background-color:aliceblue;">
+          <div>
+            <button class="btn btn-sm btn-md btn-primary mySelect" type="submit">Submit</button>
+            <button class="btn btn-sm btn-warning mySelect">Clear</button>
+            <button type="button" class="btn btn-sm btn-info btn-md mySelect">Back</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+          <!-- Id Column -->
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+
+          <!-- Title Column -->
+          <ng-container matColumnDef="title">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+            <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+          </ng-container>
+
+          <!-- Category Column -->
+          <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Category </th>
+            <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+          </ng-container>
+
+          <!-- Writer Column -->
+          <ng-container matColumnDef="writer">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Writer </th>
+            <td mat-cell *matCellDef="let element"> {{element.writer}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+      </div>
+    </div>
+  </div>
+
+</div>
+      </mat-tab>
+      <mat-tab label="Employee" style="padding:0px;margin:0px;">
+        <app-privacy></app-privacy>
+      </mat-tab>
+      
+      <mat-tab label="Student Details"> <app-student-details ></app-student-details></mat-tab>
+      <mat-tab label="Registration"> <app-register></app-register> </mat-tab>
+    </mat-tab-group>
+  </div>
+  
+  <hr />
+  <div class="container">
+    <h2>Dynamic Tabs</h2>
+    <p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
+
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+      <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+      <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+      <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="home" class="tab-pane fade in active">
+        <h3>HOME</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div id="menu1" class="tab-pane fade">
+        <h3>Menu 1</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div id="menu2" class="tab-pane fade">
+        <h3>Menu 2</h3>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      </div>
+      <div id="menu3" class="tab-pane fade">
+        <h3>Menu 3</h3>
+        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      </div>
+    </div>
+  </div>
+
+
+</form>
+

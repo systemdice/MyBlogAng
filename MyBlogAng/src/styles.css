@@ -1,1 +1,34 @@
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+/*@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}*/
+
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+/*body {
+  height: 100%;
+}*/
+
+html, body {
+  height: 100%;
+}
+
+/*body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  align-items: center;
+}*/
+/* Overwrite the styles of the mat-dialog-container element globally, but only for those
+that have an id of `modal-component` */
+/* https://stackoverflow.com/a/48689004/9263761 */
+/*mat-dialog-container#modal-component {
+  border: 3px solid #262626;
+  border-radius: 11px;
+  background-color: #1a1a1a;
+}*/
+
+

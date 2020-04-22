@@ -1,0 +1,42 @@
+/* Required */
+body {
+  margin: 0;
+  height: 100%;
+}
+
+#wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 55px 1fr 30px;
+}
+
+#content {
+  overflow-y: scroll;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+  text-align: center;
+}
+.example-icon {
+  padding: 0 14px;
+  vertical-align: middle
+}
+
+/* Optional */
+#wrapper > * {
+  padding: 0px;
+}
+
+#header {
+  background-color: #ff0000ff;
+}
+
+#content {
+  background-color: #00ff00ff;
+}
+
+#footer {
+  background-color:cornflowerblue;
+  height: 30px;
+}
