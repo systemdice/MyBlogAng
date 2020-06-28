@@ -45,7 +45,9 @@
   <div class="panel-footer">
     <div class="row">
       <div class="col-sm-6"></div>
-      <div class="col-sm-6"><button class="btn btn-primary btn-sm" [type]="submit" [disabled]="!formControl.valid" [mat-dialog-close]="1" (click)="confirmAdd()">Save</button><button class="btn btn-primary btn-sm" (click)="onNoClick()" tabindex="-1">Cancel</button></div>
+      <div class="col-sm-6">
+      <button class="btn btn-primary btn-sm" [type]="submit" [disabled]="!formControl.valid" [mat-dialog-close]="1" (click)="confirmAdd()">Save</button>
+      <button class="btn btn-primary btn-sm" (click)="onNoClick()" tabindex="-1">Cancel</button></div>
     </div>
     
   </div>

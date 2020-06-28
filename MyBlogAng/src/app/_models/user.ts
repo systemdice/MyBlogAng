@@ -10,7 +10,30 @@ export class User {
     password: string;
     firstName: string;
     lastName: string;
-    token: string;
+  token: string;
+      fatherName  : string;
+  motherName: string;
+  gender: string;
+  hobbies: string[];
+      contactNumber  : string;
+      joiningYear  : string;
+      schoolYear  : string;
+      studentType  : string;
+      emailAddress  : string;
+      emgContactNumber  : string;
+      currAddress  : string;
+      permAddress  : string;
+      healthDetails  : string;
+      langKnown  : string;
+      totalAmt  : string;
+      selectedCountryControl : string;
+      selectedCountryControlT2 : string;
+      selectedCountryControlT3 : string;
+      selectedCountryControlT4 : string;
+      dateStart : string;
+      dateEnd : string;
+      className  : string;
+      file : string;
 }
 
 export class Expense {
@@ -35,5 +58,7 @@ export class GraphData {
   Name: string;
   Who: string;
 }
+
+
 
 

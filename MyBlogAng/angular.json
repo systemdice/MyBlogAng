@@ -25,6 +25,7 @@
             ],
             "styles": [
               "src/styles.css",
+              "src/themes.scss",
               "node_modules/flag-icon-css/css/flag-icon.min.css"
             ],
             "scripts": []
@@ -90,7 +91,13 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+                //"input": "src/themes.scss"
+
+              },
               "src/styles.css"
+
             ],
             "scripts": []
           }

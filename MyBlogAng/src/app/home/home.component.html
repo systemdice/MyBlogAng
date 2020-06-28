@@ -1,15 +1,43 @@
-<div style="height:400px;overflow:auto;">
-  <h1>Hi {{currentUser.firstName}}!</h1>
-  <p>You're logged in with Angular 7!!</p>
-  <h3>All registered users:</h3>
-  HI alert<alert></alert>
-  Test: {{users|json}}
-  <ul>
-    <li *ngFor="let user of users">
-      {{user.username}} ({{user.firstName}} {{user.lastName}})
-      - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
-    </li>
-  </ul>
+<div class="panel panel-info">
+  <div class="panel-heading">Reports Available ({{id}})</div>
+  <div class="panel-body">
+    <div class="row">
+
+      <img height="10%" width="100%" src="../../assets/dashboard.png" />
+    </div>
+  </div>
+</div>
+
+
+<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Show Reports</button>
+<div id="demo" class="collapse">
+  <div class="row">
+    <div class="col-sm-6" style="background-color:yellow;">
+      <canvas baseChart
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [colors]="lineChartColors"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType"
+              [plugins]="lineChartPlugins" id="my-canvas"></canvas>
+    </div>
+    <div class="col-sm-6" style="background-color:pink;">
+      <div>
+        <canvas id="myChart" #myChart></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6" style="background-color:greenyellow;">
+      <canvas id="myPiechart" #myPiechart></canvas>
+    </div>
+    <div class="col-sm-6" style="background-color:aliceblue;">
+      <div>
+        <canvas id="myBarchart" #myBarchart></canvas>
+      </div>
+    </div>
+  </div>
 </div>
 
 

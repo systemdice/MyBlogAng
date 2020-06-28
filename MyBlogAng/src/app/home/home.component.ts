@@ -1,5 +1,7 @@
 
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
 import { Subscription } from 'rxjs';
 import { first } from 'rxjs/operators';
 
@@ -16,14 +18,25 @@ export class HomeComponent implements OnInit, OnDestroy {
     currentUserSubscription: Subscription;
   users: User[] = [];
   usersAll: any;
+  id: string;
   private settings: AppSettings;
     constructor(
       private authenticationService: AuthenticationService, private alertService: AlertService,
-      private userService: UserService, private appSettingsService: AppSettingsServiceService
+      private userService: UserService, private appSettingsService: AppSettingsServiceService,
+      private route: ActivatedRoute,
+      private router: Router
     ) {
         this.currentUserSubscription = this.authenticationService.currentUser.subscribe(user => {
             this.currentUser = user;
-        });
+      });
+      console.log('liku');
+      this.route.params.subscribe(params => {
+        this.id = this.route.snapshot.paramMap.get('id');
+        //alert(this.id);
+      });
+      //this.id = this.route.snapshot.paramMap.get('id');
+      //alert(this.id)
+
     }
 
     ngOnInit() {

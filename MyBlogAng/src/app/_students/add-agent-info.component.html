@@ -1,56 +1,169 @@
-<div>
-  <div class="add-title">
-    <h2 class="primary">Add customer</h2>
-  </div>
-  <div>
-    <form [formGroup]="addCusForm" (change)="formChanged()">
-      <mat-grid-list cols="2" [cols]="breakpoint" rowHeight="85px" (window:resize)="onResize($event)">
-        <mat-grid-tile>
-          <div class="text-inside">
-            <mat-form-field>
-              <input matInput placeholder="First Name" value={{fname}} formControlName="firstname" required>
-              <mat-error *ngIf="addCusForm.controls.firstname.hasError('required')">
-                Please enter first name
-              </mat-error>
-              <mat-error *ngIf="addCusForm.controls.firstname.hasError('pattern')">
-                Please enter valid first name
-              </mat-error>
-            </mat-form-field>
-          </div>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <div class="text-inside">
-            <mat-form-field class="example-full-width">
-              <input matInput placeholder="Last Name" value={{lname}} formControlName="lastname" required>
-              <mat-error *ngIf="addCusForm.controls.lastname.hasError('required')">
-                Please enter last name
-              </mat-error>
-              <mat-error *ngIf="addCusForm.controls.lastname.hasError('pattern')">
-                Please enter valid last name
-              </mat-error>
-            </mat-form-field>
-          </div>
-        </mat-grid-tile>
+<form [formGroup]="addCusForm" (ngSubmit)="onFormSubmit(addCusForm.value)">
+
+  <div class="panel panel-default" style="overflow:hidden">
+    <div class="panel-heading">{{AddorEdit}} Student <span style="color:cornflowerblue"> {{data?.Name}}</span> (Identity No-<span style="color:cornflowerblue"> {{data?.id}}</span>)</div>
+    <div class="panel-body fixed-panel">
+      <mat-grid-list cols="2" [cols]="breakpoint" rowHeight="70px" (window:resize)="onResize($event)">
 
         <mat-grid-tile>
           <div class="text-inside">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="User Name" formControlName="Name">
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="text-inside">
             <mat-form-field>
-              <input matInput [matDatepicker]="picker1" placeholder="Date of birth">
+              <input matInput [matDatepicker]="picker1" placeholder="Date of birth" formControlName="dateStart">
               <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
               <mat-datepicker #picker1></mat-datepicker>
             </mat-form-field>
           </div>
         </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="text-inside">
+            <mat-form-field class="demo-full-width">
+              <input formControlName="firstName" matTooltip="Enter First Name" matInput placeholder="First Name">
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
         <mat-grid-tile>
           <div class="text-inside">
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Email address" formControlName="email" required>
-              <mat-error *ngIf="addCusForm.controls.email.hasError('required')">
-                Please enter email id
-              </mat-error>
-              <mat-error *ngIf="addCusForm.controls.email.hasError('email')">
-                Please enter valid email id
-              </mat-error>
+              <input matInput placeholder="Last Name" formControlName="lastName">
+
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="text-inside">
+            <div>
+              <mat-label>Sex</mat-label>
+            </div>
+            <mat-radio-group formControlName="gender" class="person-radio-group">
+              <mat-radio-button class="person-radio-button" *ngFor="let gend of gender" [value]="gend.name">
+                {{gend.name}}
+              </mat-radio-button>
+            </mat-radio-group>
+
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="text-inside">
+            
+            <mat-form-field>
+              <mat-select name="Category" formControlName="className" placeholder="Class Name">
+                <mat-option *ngFor="let classs of classes" [value]="classs.name">
+                  {{classs.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <!--<div *ngFor="let hobby of addCusForm.controls.hobbies.controls; let i=index;"
+         class="flex-container  align-center multi-checkbox">
+      <input type="checkbox" [formControl]="hobby" (change)="getSelectedHobbies(hobby, myhobbies[i].name);">
+      {{myhobbies[i].name}}
+    </div>-->
+
+
+          <label formArrayName="hobbies" *ngFor="let order of addCusForm.controls.hobbies.controls; let i = index">
+            <input type="checkbox" [formControlName]="i">
+            {{studentHobbyData[i].name}}
+          </label>
+
+        </mat-grid-tile>
+
+
+        <mat-grid-tile>
+          <div class="text-inside">
+            <mat-form-field class="demo-full-width">
+              <input formControlName="fatherName" matTooltip="Father's Name" matInput placeholder="Father's Name">
+            </mat-form-field>
+
+
+
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="text-inside">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Mother's Name" formControlName="motherName">
+
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="text-inside">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Contact Number" formControlName="contactNumber">
+
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="text-inside">
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker11" placeholder="Date of joining" formControlName="dateEnd">
+              <mat-datepicker-toggle matSuffix [for]="picker11"></mat-datepicker-toggle>
+              <mat-datepicker #picker11></mat-datepicker>
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="text-inside">
+            <mat-form-field >
+              <mat-select name="Category" formControlName="Category" placeholder="Category">
+                <mat-option *ngFor="let catgry of Categories" [value]="catgry.name">
+                  {{catgry.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="text-inside">
+            <div class="col-sm-4">
+              <mat-form-field matTooltip="Joining Year (numeric)"   matTooltipPosition="left">
+                <input matInput type="number" placeholder="Joining Year" formControlName="joiningYear">
+              </mat-form-field>
+            </div>
+            <div class="col-sm-4">
+              <mat-form-field matTooltip="School Year (numeric)" matTooltipPosition="right">
+                <input matInput type="number" placeholder="School Year" formControlName="schoolYear">
+              </mat-form-field>
+            </div>
+            <div class="col-sm-4">
+              <mat-form-field matTooltip="Student Type"  matTooltipPosition="left">
+                <input matInput placeholder="Student Type" formControlName="studentType">
+              </mat-form-field>
+            </div>
+
+
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="text-inside">
+            <mat-form-field>
+              <input matInput placeholder="Email Address" formControlName="emailAddress">
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="text-inside">
+            <mat-form-field>
+              <input matInput placeholder="Emergency Contact Number" formControlName="emgContactNumber">
             </mat-form-field>
           </div>
         </mat-grid-tile>
@@ -58,37 +171,131 @@
         <mat-grid-tile>
           <div class="text-inside">
             <mat-form-field>
-              <textarea matInput placeholder="Address"></textarea>
-            </mat-form-field>LIku{{animal}}
+              <textarea matInput placeholder="Current Address" formControlName="currAddress"> </textarea>
+            </mat-form-field>
           </div>
         </mat-grid-tile>
         <mat-grid-tile>
           <div class="text-inside">
-            <mat-radio-group class="gender">
-              <div style="color:grey;">Gender</div>
-              <mat-radio-button color="primary" style="padding:4px 4px 0px 0px;" value="1">Male</mat-radio-button>
-              <mat-radio-button color="primary" style="padding:4px 0px 0px 24px;" value="2">Female</mat-radio-button>
-            </mat-radio-group>
+            <mat-form-field>
+              <textarea matInput placeholder="Permanent Address" formControlName="permAddress"> </textarea>
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="text-inside">
+            <mat-form-field>
+              <textarea matInput placeholder="Any SPecific Allergy or Health Issue" formControlName="healthDetails"> </textarea>
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="text-inside">
+            <mat-form-field>
+              <textarea matInput placeholder="Language Known" formControlName="langKnown"> </textarea>
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="text-inside">
+            <mat-form-field>
+              <input matInput placeholder="Total Amount" formControlName="totalAmt">
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="text-inside">
+
+
+
+            
+              <!--Selected = {{selectedCountryControl.value}}-->
+            <div class="col-sm-3 divWithNoLeftRightPadding">
+
+              <mat-form-field>
+                <mat-select name="countryReactiveVaraible1" formControlName="selectedCountryControl" placeholder="Term1">
+                  <mat-option *ngFor="let country of countries" [value]="country.short">
+                    {{country.full}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-sm-3 divWithNoLeftRightPadding">
+              <mat-form-field>
+                <mat-select name="countryReactiveVaraible" formControlName="selectedCountryControlT2" placeholder="Term2">
+                  <mat-option *ngFor="let country of countries" [value]="country.short">
+                    {{country.full}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div class="col-sm-3 divWithNoLeftRightPadding">
+              <mat-form-field>
+                <mat-select name="countryReactiveVaraible2" formControlName="selectedCountryControlT3" placeholder="Term3">
+                  <mat-option *ngFor="let country of countries" [value]="country.short">
+                    {{country.full}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-sm-3 divWithNoLeftRightPadding">
+              <mat-form-field>
+                <mat-select name="countryReactiveVaraible3" formControlName="selectedCountryControlT4" placeholder="Term4">
+                  <mat-option *ngFor="let country of countries" [value]="country.short">
+                    {{country.full}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+
           </div>
         </mat-grid-tile>
       </mat-grid-list>
+        <mat-grid-list cols="2" [cols]="breakpoint" rowHeight="150px" (window:resize)="onResize($event)">
+          <mat-grid-tile>
+            <div class="text-inside" style="Width:230px;height:150px;overflow:scroll;">
 
-      <div class="btn-sec">
-        <button mat-raised-button type="submit" color="primary" class="Update-btn" (click)="onAddCus()">Save</button>
-        <button mat-raised-button type="button" class="Discard-btn" (click)="openDialog()">Cancel</button>
-      </div>
-      <hr />
-     
-    </form>
-    <div mat-dialog-content>
-      <p>What's your email?</p>
-      <mat-form-field>
-        <input matInput [(ngModel)]="data.email">
-      </mat-form-field>
-    </div>
-    <div mat-dialog-actions>
-      <button mat-button  (click)="onNoClick()">No</button>
-      <button mat-button [mat-dialog-close]="data" cdkFocusInitial (click)="onYesClick()">Yes</button>
+              <!--<mat-form-field floatPlaceholder="never">
+          <input [hidden]="true" (change)="onFileSelect($event)" type="file" accept="all/*" #fileSelect>
+          <input readonly matInput [(ngModel)]="filename" placeholder="Select file..." />
+          <button *ngIf="this.base64File" (click)="this.base64File = null; this.filename = null" matSuffix matTooltip="Remove selected file"
+                  [matTooltipPosition]="'above'" type="button" color="warn" mat-icon-button>
+            <mat-icon>close</mat-icon>
+          </button>
+          <button type="button" matSuffix mat-icon-button (click)="onFileSelect;" matTooltip="Select a file" [matTooltipPosition]="'above'">
+            <mat-icon>file_upload</mat-icon>
+          </button>
+        </mat-form-field>-->
+              <mat-selection-list #shoes>
+                <mat-list-option *ngFor="let shoe of typesOfShoes">
+                  {{shoe}}
+                </mat-list-option>
+              </mat-selection-list>
+            </div>
+          </mat-grid-tile>
+
+          <mat-grid-tile>
+            <div class="text-inside">
+              <div>
+                <mat-label>Photo Upload</mat-label>
+              </div>
+              <input type="file" name="file-7[]" id="file-7" class="inputfile inputfile-6" (change)="handleFileInput($event.target.files)">
+            </div>
+          </mat-grid-tile>
+
+        </mat-grid-list>
+
+
+
+</div>
+    <div class="panel-footer">
+      <mat-checkbox formControlName="Active">Register this.</mat-checkbox>&nbsp;
+      <button class="btn btn-primary btn-sm" cdkFocusInitial (click)="onAddCus()" [disabled]="!addCusForm.valid">Save</button>&nbsp;|
+      <button class="btn btn-primary btn-sm" [mat-dialog-close]="1" (click)="onNoClick()">Cancel</button>Options selected: {{shoes.selectedOptions}}
     </div>
   </div>
-</div>
+</form>

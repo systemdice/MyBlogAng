@@ -1,15 +1,49 @@
 <div class="table-holder mat-elevation-z8">
-  <mat-form-field>
+  <div class="row">
+    <div class="col-sm-4">
+
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter" [(ngModel)]="filterName" name="filterName">
+        <button mat-button matPrefix mat-icon-button>
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>           
+
+    </div>
+    <div class="col-sm-6" align="right">
+      <!--style="border: 2px solid black"-->
+      <div class="row">
+        <div class="col-sm-10">
+          <input type="file" #fileInput (change)="onFileChange($event)" multiple="false" style="margin-top:12px;" />
+        </div>
+        <div class="col-sm-2">
+          <button class="btn btn-primary btn-sm" style="margin-top:12px;" (click)="uploadFile();">Import Students</button>
+        </div>
+      </div>
+    </div>
+          <div class="col-sm-2" align="right">
+            <!--<button class="btn btn-primary btn-sm" style="margin-top:12px;" (click)="ImportExceltoDatasource()">Import Students</button>&nbsp;-->
+            <button class="btn btn-primary btn-sm" style="margin-top:12px;" (click)="ExportTOExcel()">Export Students</button>
+          </div>
+      </div>
+  <!--<mat-form-field>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-  </mat-form-field>
+  </mat-form-field>-->
 </div>
 
 <div class="table-holder mat-elevation-z8">
 
   <div class="title-holder">
-    <h1 class="list-title">Student Details</h1>
+    <div class="row">
+      <div class="col-sm-6">
+        <h1 class="list-title">Student Details &nbsp; &nbsp;</h1>
+      </div>
+      <div class="col-sm-6" style="text-align: right;">
+        <a href="javascript:void(0);" (click)="loadShowAllUsers()"><u>Show All Students</u></a>
+      </div>
+    </div>
   </div>
-  <div class="example-container mat-elevation-z8">
+  <div class="example-container mat-elevation-z8"  #TABLE #table>
     <!--i added this div to make it as responsive. We can remove the div if it doesn't work'-->
     <mat-table [dataSource]="dataSource" matSort>
 
@@ -25,58 +59,83 @@
         <mat-cell *matCellDef="let row"> {{row.Name}} </mat-cell>
       </ng-container>
 
+      <ng-container matColumnDef="gender">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Sex </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.gender}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="contactNumber">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Contact </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.contactNumber}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="className">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Class </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.className}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="schoolYear">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> YEAR </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.schoolYear}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="dateStart">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> DOB </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.dateStart| date:'MM/dd/yyyy'}} </mat-cell>
+      </ng-container>
+      
       <!-- Name Column -->
       <ng-container matColumnDef="Category">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Category </mat-header-cell>
         <mat-cell *matCellDef="let row" [style.color]="row.Category.includes('Koko') ? 'blue' : 'green'"> {{row.Category}} </mat-cell>
       </ng-container>
 
-      <!-- Color Column -->
-      <ng-container matColumnDef="State">
-        <mat-header-cell *matHeaderCellDef mat-sort-header> State </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.State}} </mat-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="details">
-        <mat-header-cell *matHeaderCellDef> Details </mat-header-cell>
-        <mat-cell *matCellDef="let row">
-          <button mat-icon-button color="primary"><!--(click)="redirectToDetails(element.id)"-->
-            <mat-icon class="mat-18">reorder</mat-icon>
+      <ng-container matColumnDef="Action">
+        <mat-header-cell *matHeaderCellDef style="cursor:pointer">
+          <mat-icon class="mat-18" style="color:white;font-weight:bold" (click)="openDialogNew('Add')">add</mat-icon> <a href="javascript:void(0);" (click)="openDialogNew('Add')"><u>(Add)</u></a>
+        </mat-header-cell>
+        <!--<mat-header-cell *matHeaderCellDef> Update </mat-header-cell>-->
+        <mat-cell *matCellDef="let row; let i=index;">
+          <button mat-icon-button color="primary" (click)="openDialog(i, row.id, row.Name, row.Category, row,row)">
+            <mat-icon aria-label="Edit">edit</mat-icon>
+          </button>
+          <button mat-icon-button color="primary" (click)="deleteItem(i, row.id)">
+            <mat-icon aria-label="Delete">delete</mat-icon>
           </button>
         </mat-cell>
       </ng-container>
 
-      <ng-container matColumnDef="update">
-        <mat-header-cell *matHeaderCellDef> Update </mat-header-cell>
-        <mat-cell *matCellDef="let row">
-          <button mat-icon-button color="accent" (click)="openDialog()">
-            <mat-icon class="mat-18">system_update</mat-icon>
-          </button>
+      <!--<ng-container matColumnDef="update">
+    <mat-header-cell *matHeaderCellDef> Update </mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <button mat-icon-button color="accent" (click)="openDialog()">
+        <mat-icon class="mat-18">system_update</mat-icon>
+      </button>
 
-        </mat-cell>
+      <button mat-icon-button color="primary" (click)="openDialog(i, row.id, row.Name, row.Category, row)">
+        <mat-icon aria-label="Edit">edit</mat-icon>
+      </button>
 
-      </ng-container>
-      <ng-container matColumnDef="delete">
-        <mat-header-cell *matHeaderCellDef> Delete </mat-header-cell>
-        <mat-cell *matCellDef="let row">
-          <button mat-icon-button color="warn" >
-            <mat-icon class="mat-18">delete</mat-icon>
-          </button>
-          <div *ngIf="data">
-             {{data.email}} <p></p>
-          </div>
-        </mat-cell>
+    </mat-cell>
 
-      </ng-container>
+  </ng-container>
+  <ng-container matColumnDef="delete">
+    <mat-header-cell *matHeaderCellDef> Delete </mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <button mat-icon-button color="warn" >
+        <mat-icon class="mat-18">delete</mat-icon>
+      </button>
 
+    </mat-cell>
+
+  </ng-container>-->
       <!--<ng-container matColumnDef="delete">
-        <th mat-header-cell *matHeaderCellDef> Delete </th>
-        <td mat-cell *matCellDef="let element">
-          <button mat-icon-button color="warn" (click)="redirectToDelete(element.id)">
-            <mat-icon class="mat-18">delete</mat-icon>
-          </button>
-        </td>
-      </ng-container>-->
+    <th mat-header-cell *matHeaderCellDef> Delete </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button color="warn" (click)="redirectToDelete(element.id)">
+        <mat-icon class="mat-18">delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>-->
 
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
@@ -87,25 +146,20 @@
     <mat-toolbar>
       <mat-toolbar-row style="height:30px;">
         <mat-icon (click)="exportCsv(dataSource)" title="Export as CSV">save_alt</mat-icon>
+        <mat-icon (click)="exportRExcel(dataSource)" title="Export as CSV">cloud_download</mat-icon>
+        
         <span class="example-spacer"></span>
         <mat-paginator style="background: none;" [length]="200"
                        [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
       </mat-toolbar-row>
+      
     </mat-toolbar>
     <!--<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>-->
 
 
   </div>
 
-  <div>
-
-    <button mat-raised-button (click)="openDialog()">Open modal</button>
-
-    <br />
-    <div *ngIf="data">
-      You signed up with: {{data.email}} and {{data.name}}<p></p>
-    </div>
-  </div>
+  
 </div>
 
 

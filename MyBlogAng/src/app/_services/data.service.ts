@@ -2,10 +2,12 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Issue } from '../_models/issue';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { GlobalConstants } from '../shared/global-constants';
 
 @Injectable()
 export class DataService {
-  private readonly API_URL = 'https://api.github.com/repos/angular/angular/issues';
+  apiURLStuentsAPI = GlobalConstants.apiURLStuentsAPI;
+  private readonly API_URL = this.apiURLStuentsAPI; //'https://api.github.com/repos/angular/angular/issues';
 
   dataChange: BehaviorSubject<Issue[]> = new BehaviorSubject<Issue[]>([]);
   // Temporarily stores data from dialogs

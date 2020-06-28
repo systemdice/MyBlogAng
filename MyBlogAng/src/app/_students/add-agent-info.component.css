@@ -47,6 +47,27 @@ mat-form-field {
   width: 100%;
 }
 
+.divWithNoLeftRightPadding {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.fixed-panel {
+  min-height: 450px;
+  max-height: 450px;
+  overflow-y: scroll;
+}
+
+
+.example-section {
+  display: flex;
+}
+
+.example-margin {
+  margin: 0 5px;
+}
+
+
 @media (max-width: 800px) {
   .btn-sec {
     margin-right: 1rem !important;

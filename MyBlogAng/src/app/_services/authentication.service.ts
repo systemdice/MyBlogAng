@@ -32,7 +32,8 @@ export class AuthenticationService {
                 // login successful if there's a jwt token in the response
                 if (user.username == username && user.password == password) {
                     // store user details and jwt token in local storage to keep user logged in between page refreshes
-                    localStorage.setItem('currentUser', JSON.stringify(user));
+                  localStorage.setItem('currentUser', JSON.stringify(user));
+                  localStorage.setItem('Role', user.username == 'Anshu' ?'Admin':'user');
                     this.currentUserSubject.next(user);
                 }
 
@@ -75,7 +76,8 @@ export class AuthenticationService {
 
     logout() {
         // remove user from local storage to log user out
-        localStorage.removeItem('currentUser');
+      localStorage.removeItem('currentUser');
+      localStorage.removeItem('Role');
         this.currentUserSubject.next(null);
     }
 }

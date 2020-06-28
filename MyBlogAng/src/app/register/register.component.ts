@@ -14,7 +14,7 @@ import { map, first } from 'rxjs/operators';
 import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
 import { UserService } from '../_services';
-import { GraphData } from '../_models';
+import { GraphData, User } from '../_models';
 import { Chart } from 'chart.js';
 //import * as Chart from 'chart.js';
 
@@ -39,6 +39,7 @@ export class RegisterComponent implements OnInit {
   @ViewChild('myChart', { static: true }) myChart;
   @ViewChild('myBarchart', { static: true }) myBarchart;
   @ViewChild('myPiechart', { static: true }) myPiechart;
+  @ViewChild('myPiechartTrans', { static: true }) myPiechartTrans;
 
 
   lineChartData: ChartDataSets[] = [
@@ -66,7 +67,7 @@ export class RegisterComponent implements OnInit {
 
 
 
-  displayedColumns = ['id', 'title', 'state', 'url', 'created_at', 'updated_at', 'actions'];
+  displayedColumns = ['id', 'Name', 'Category', 'Price', 'actions'];
   exampleDatabase: DataService | null;
   dataSource: ExampleDataSource | null;
   index: number;
@@ -110,13 +111,13 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  startEdit(i: number, id: number, title: string, state: string, url: string, created_at: string, updated_at: string) {
+  startEdit(i: number, id: number, Name: string, Category: string, Price: string) {
     this.id = id;
     // index row is used just for debugging proposes and can be removed
     this.index = i;
     console.log(this.index);
     const dialogRef = this.dialog.open(EditAgentComponent, {
-      data: { id: id, title: title, state: state, url: url, created_at: created_at, updated_at: updated_at }
+      data: { id: id, Name: Name, Category: Category, Price: Price  }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -131,11 +132,11 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  deleteItem(i: number, id: number, title: string, state: string, url: string) {
+  deleteItem(i: number, id: number, Name: string, Category: string, Price: string) {
     this.index = i;
     this.id = id;
     const dialogRef = this.dialog.open(DeleteAgentComponent, {
-      data: { id: id, title: title, state: state, url: url }
+      data: { id: id, Name: Name, Category: Category, Price: Price }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -177,6 +178,7 @@ export class RegisterComponent implements OnInit {
 
   public loadData() {
     this.exampleDatabase = new DataService(this.httpClient);
+    
     this.dataSource = new ExampleDataSource(this.exampleDatabase, this.paginator, this.sort);
     fromEvent(this.filter.nativeElement, 'keyup')
       // .debounceTime(150)
@@ -344,6 +346,53 @@ export class RegisterComponent implements OnInit {
 
   }
 
+  private loadExpensePIEDataTrans() {
+    //this.PrepareChatData();
+    //this.ctx = document.getElementById("canvas1")[0].getContext("2d");
+    //this.userService.getAllTransaction().subscribe((result: GraphData[]) => {
+    //  result.forEach(x => {
+    //    this.Name.push(x.Name);
+    //    this.Price.push(x.Who);
+    //  });
+    this.canvas = this.myPiechartTrans.nativeElement;
+    this.ctx = this.canvas.getContext('2d');
+    this.Barchart = new Chart(this.ctx, {
+      type: 'pie',
+      data: {
+        labels: ['JAN', 'FEB', 'MAR'],
+        datasets: [
+          {
+            data: [150,60,200],
+            borderColor: '#3cba9f',
+            backgroundColor: [
+              "#3cb371",
+              "#0000FF",
+              "#9966FF",
+              "#4C4CFF",
+
+            ],
+            fill: true
+          }
+        ]
+      },
+      options: {
+        legend: {
+          display: true,
+
+        },
+        scales: {
+          xAxes: [{
+            display: false
+          }],
+          yAxes: [{
+            display: false
+          }],
+        }
+      }
+    });
+
+  }
+
   ngAfterViewInit() {
     this.PrepareChatData();
     setTimeout(() => {
@@ -351,7 +400,8 @@ export class RegisterComponent implements OnInit {
       this.loadExpenseLINEData();
       this.loadExpenseBARData();
       this.loadExpensePIEData();
-    }, 3000);
+      this.loadExpensePIEDataTrans();
+    }, 6000);
     
   }
   
@@ -395,8 +445,8 @@ export class ExampleDataSource extends DataSource<Issue> {
 
     return merge(...displayDataChanges).pipe(map(() => {
       // Filter data
-      this.filteredData = this._exampleDatabase.data.slice().filter((issue: Issue) => {
-        const searchStr = (issue.id + issue.title + issue.url + issue.created_at).toLowerCase();
+      this.filteredData = this._exampleDatabase.data.slice().filter((issue: any) => {
+        const searchStr = (issue.id + issue.Name + issue.Category + issue.Price).toLowerCase();
         return searchStr.indexOf(this.filter.toLowerCase()) !== -1;
       });
 

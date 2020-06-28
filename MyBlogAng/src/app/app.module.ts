@@ -18,7 +18,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 //import { AppRoutingModule } from './app-routing.module';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-//import { FlexLayoutModule } from "@angular/flex-layout";
+import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatIconModule } from "@angular/material/icon";
 
 import { AlertComponent } from './_components';
@@ -44,6 +44,14 @@ import { EditAgentComponent } from './dialogs/edit-agent.component';
 import { DeleteAgentComponent } from './dialogs/delete-agent.component';
 import { DataService } from './_services';
 import { ChartsModule } from 'ng2-charts';
+import { RegisterUserRegistrationComponent } from './register-user-registration/register-user-registration.component';
+import { DialogBoxComponent } from './register-user-registration/dialog-box/dialog-box.component';
+import { AdminSetingsComponent } from './Settings/admin-setings/admin-setings.component';
+import { UserSetingsComponent } from './Settings/user-setings/user-setings.component';
+import { UserCalndarComponent } from './Settings/UserSetings/user-calndar.component';
+import { UserOptionsComponent } from './Settings/UserSetings/user-options.component';
+import { OfficeManagementComponent } from './register/Office/office-management.component';
+import { StudentManagementComponent } from './register/Student/student-management.component';
 //import { FlexLayoutModule } from '@angular/flex-layout';
 //import { ToastrModule } from 'ngx-toastr';
 
@@ -66,7 +74,15 @@ import { ChartsModule } from 'ng2-charts';
     LoadingComponent,
     AddAgentComponent,
     EditAgentComponent,
-    DeleteAgentComponent
+    DeleteAgentComponent,
+    RegisterUserRegistrationComponent,
+    DialogBoxComponent,
+    AdminSetingsComponent,
+    UserSetingsComponent,
+    UserCalndarComponent,
+    UserOptionsComponent,
+    OfficeManagementComponent,
+    StudentManagementComponent,
     //,AppSettings
   ],
   imports: [
@@ -76,8 +92,8 @@ import { ChartsModule } from 'ng2-charts';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule, OverlayModule, ChartsModule
-    //, FlexLayoutModule
+    AppRoutingModule, OverlayModule, ChartsModule,
+    FlexLayoutModule
     , MatIconModule, NgxFlagIconCssModule // imported by the module 'MaterialModule'.Please add a @NgModule annotation. //FlexLayoutModule,
     //ToastrModule.forRoot()
   ],
@@ -92,6 +108,6 @@ import { ChartsModule } from 'ng2-charts';
     //,AppSettingsService, AppSettings
   ],
   bootstrap: [AppComponent],
-  entryComponents: [AddAgentInfoComponent, LogoutComponent, LoadingComponent, AddAgentComponent, EditAgentComponent, DeleteAgentComponent]
+  entryComponents: [AddAgentInfoComponent, LogoutComponent, LoadingComponent, AddAgentComponent, EditAgentComponent, DeleteAgentComponent, DialogBoxComponent]
 })
 export class AppModule { }

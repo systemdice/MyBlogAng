@@ -1,0 +1,48 @@
+
+<form [formGroup]="form">
+
+
+  <div class="row">
+    <mat-tab-group class="full-width" color="primary" #tabGroup style="padding-left:30px;">
+
+      <mat-tab label="Admission Management" style="padding:0px;margin:0px;">
+        <app-privacy></app-privacy>
+      </mat-tab>
+
+      <mat-tab label="Fees Management">
+        <app-student-details></app-student-details>
+      </mat-tab>
+      <i class="glyphicon glyphicon-tasks"></i><mat-tab label="Payroll Management"> <app-register></app-register> </mat-tab>
+      <mat-tab label="Front Office"> <app-register></app-register> </mat-tab>
+      <mat-tab label="Health"><i class="glyphicon glyphicon-tasks"></i> <app-register></app-register> </mat-tab>
+      <mat-tab label="Event & Activity Management"> <app-register></app-register> </mat-tab>
+      <mat-tab label="Person">
+        <ng-template matTabContent>
+          test1
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <!--<img src='../../../assets/images/Liku1.png' />-->
+          <i class="glyphicon glyphicon-tasks"></i>
+          <span>foo</span>
+        </ng-template>
+        <app-register></app-register>
+      </mat-tab>
+
+
+      <mat-tab label="Company" style="background:url('../../../assets/images/Liku1.png')">
+        <i class="glyphicon glyphicon-tasks"></i>
+        <ng-template matTabContent>
+          test2
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+
+
+
+</form>
+

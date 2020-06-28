@@ -1,0 +1,62 @@
+.example-card {
+  /*max-width: 400px;*/
+}
+
+.example-header-imageLiku {
+  background-image: url('../../../assets/images/Liku1.png');
+  background-size: cover;
+}
+.example-header-imageJhia {
+  background-image: url('../../../assets/images/Jhia1.jpg');
+  background-size: cover;
+}
+
+/*.container {
+  width: 450px;
+}*/
+
+mat-card {
+  /*height: 65px;*/
+  transition: all 0.5s;
+  overflow: hidden
+}
+
+.right {
+  align-items: flex-end;
+}
+
+div.toggle, div.deleteSave {
+  text-align: right;
+  align-self: center;
+}
+
+div.body {
+  display: grid;
+  grid-template-columns: 4fr 4fr 1fr;
+  grid-column-gap: 10px;
+}
+
+div.vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+div.title {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+div.container {
+  margin-bottom: 12px;
+}
+
+div.header {
+  display: grid;
+  grid-template-columns: 3fr 6fr 1fr;
+  grid-column-gap: 10px;
+}
+
+mat-card.expanded {
+  /*height: 150px;*/
+  margin: 20px 0 20px 0;
+}

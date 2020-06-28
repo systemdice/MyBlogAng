@@ -1,0 +1,691 @@
+
+<form [formGroup]="form">
+
+
+  <div class="row">
+    <mat-tab-group class="full-width" color="primary" #tabGroup style="padding-left:30px;">
+      <mat-tab label="Student Registration"> <app-student-details></app-student-details></mat-tab>
+      <mat-tab label="Employee Registration"> <app-register></app-register> </mat-tab>
+      <mat-tab label="Sudent Inputs">
+        <div class="table-holder">
+          <div class="panel panel-info">
+            <div class="panel-heading">Student Management</div>
+            <div class="panel-body">
+
+              <div class="row">
+                <div class="col-sm-3" style="background-color:aliceblue;">
+                  <mat-form-field class="full-width">
+                    <input matInput name="ServiceLevelId1" id="ServiceLevelId1" placeholder="Service Level ID">
+
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-3" style="background-color:aliceblue;">
+                  <!--sel-{{selectedGame}}-->
+                  <mat-radio-group name="language" [(ngModel)]="selectedGame" [ngModelOptions]="{standalone: true}" class="example-radio-group" (change)="onChange($event)">
+                    <mat-radio-button class="example-radio-button" *ngFor="let lang of LANGUAGES" [value]="lang.id" [checked]>
+                      {{lang.name}}
+                    </mat-radio-button>
+                  </mat-radio-group>
+                  <button (click)="abc()"></button>
+                </div>
+                <div class="col-sm-6" style="background-color:aliceblue;">
+                  <fieldset class="demo-fieldset">
+                    <mat-list dense>
+                      <mat-list-item>
+                        <mat-checkbox [(ngModel)]="select_all" (ngModelChange)="onSelectAll($event)" [ngModelOptions]="{standalone: true}"></mat-checkbox>
+                        <span fxFlex="5"></span>
+                        <span>Select all</span>
+                      </mat-list-item>
+
+                      <ng-container *ngFor="let d of data;">
+                        <mat-list-item>
+                          <mat-checkbox [(ngModel)]="d.is_selected" (ngModelChange)="onSelectAllIndividual(d.is_selected)" [ngModelOptions]="{standalone: true}"></mat-checkbox>
+                          <span fxFlex="5"></span>
+                          <span>
+                            {{ d.name }}-{{d.is_selected}}
+                          </span>
+                        </mat-list-item>
+                      </ng-container>
+                    </mat-list>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="row" style="padding:3px;">
+                <div class="col-sm-3" style="background-color:aliceblue;">
+                  <mat-form-field class="full-width">
+                    <input type="text"
+                           placeholder="Pick one(AutoComplete)"
+                           aria-label="Number"
+                           matInput
+                           [formControl]="myControl"
+                           [matAutocomplete]="auto">
+                    <mat-autocomplete #auto="matAutocomplete">
+                      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                  <p>
+                    Icon with a badge
+                    <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+                    <!-- Include text description of the icon's meaning for screen-readers -->
+                    <span class="cdk-visually-hidden">
+                      Example with a home icon with overlaid badge showing the number 15
+                    </span>
+                  </p>
+                </div>
+                <div class="col-sm-3" style="background-color:aliceblue;">
+                  <mat-radio-group formControlName="gender" class="full-width">
+                    <mat-radio-button class="mySelect" value="1">Male</mat-radio-button>
+                    <mat-radio-button value="2">Female</mat-radio-button>
+                    <mat-radio-button value="3">Other</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+                <div class="col-sm-3" style="background-color:aliceblue;">
+                  <!--<mat-select formControlName="department" placeholder="Department" class="full-width mySelect">
+                    <mat-option>None</mat-option>
+                    <ng-container *ngFor="let department of departments">
+                      <mat-option value="{{department.id
+                                  }}">{{department.value}}</mat-option>
+              </ng-container>
+                          </mat-select>-->
+                  
+
+                  /d
+                </div>
+                <div class="col-sm-3" style="background-color:aliceblue;">
+                  <mat-form-field class="full-width">
+                    <input formControlName="email" matInput placeholder="Email">
+                  </mat-form-field>
+
+                </div>
+              </div>
+              <div class="row" style="padding:3px;">
+                <div class="col-sm-3" style="background-color:aliceblue;">
+                  <mat-form-field class="full-width">
+                    <input matInput name="ServiceLevelId1" id="ServiceLevelId1" placeholder="Service Level ID">
+
+
+
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-3" style="background-color:aliceblue;">
+                  <mat-radio-group formControlName="gender" class="example-radio-group">
+                    <mat-radio-button class="example-radio-button" value="1">Male</mat-radio-button>
+                    <mat-radio-button class="example-radio-button" value="2">Female</mat-radio-button>
+                    <mat-radio-button class="example-radio-button" value="3">Other</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+                <div class="col-sm-3" style="background-color:aliceblue;">
+                  <!--<mat-select formControlName="department" placeholder="Department" class="full-width">
+              <mat-option>None</mat-option>
+              <ng-container *ngFor="let department of departments">
+                <mat-option value="{{department.id}}">{{department.value}}</mat-option>
+              </ng-container>
+                    </mat-select>-->
+                </div>
+                <div class="col-sm-3" style="background-color:aliceblue;">
+                  <mat-form-field class="full-width">
+                    <input formControlName="email" matInput placeholder="Email">
+                  </mat-form-field>
+
+                </div>
+              </div>
+              <div class="row" style="padding:3px;">
+                <div class="col-sm-3" style="background-color:aliceblue;">
+                  <mat-form-field>
+                    <input formControlName="hireDate" matInput [matDatepicker]="picker" placeholder="Hire Date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-3" style="background-color:aliceblue;">
+                  t-
+                  <mat-radio-group formControlName="gender" class="example-radio-group">
+                    <mat-radio-button class="example-radio-button" value="1">Male</mat-radio-button>
+                    <mat-radio-button class="example-radio-button" value="2">Female</mat-radio-button>
+                    <mat-radio-button class="example-radio-button" value="3">Other</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+                <div class="col-sm-3" style="background-color:aliceblue;">
+                  <mat-checkbox class="example-radio-group" >Permanent Employee</mat-checkbox>
+                </div>
+                <div class="col-sm-3" style="background-color:aliceblue;">
+                  <div>
+                    <button class="btn btn-sm btn-md btn-primary mySelect" type="submit">Submit</button>
+                    <button class="btn btn-sm btn-warning mySelect">Clear</button>
+                    <button type="button" class="btn btn-sm btn-info btn-md mySelect">Back</button>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row mat-elevation-z8">
+                <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+                  <!-- Id Column -->
+                  <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                  </ng-container>
+
+                  <!-- Title Column -->
+                  <ng-container matColumnDef="title">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+                    <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+                  </ng-container>
+
+                  <!-- Category Column -->
+                  <ng-container matColumnDef="category">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Category </th>
+                    <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+                  </ng-container>
+
+                  <!-- Writer Column -->
+                  <ng-container matColumnDef="writer">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Writer </th>
+                    <td mat-cell *matCellDef="let element"> {{element.writer}} </td>
+                  </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+                <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </mat-tab>
+      <mat-tab label="Attendance Management" style="padding:0px;margin:0px;">
+        <app-privacy></app-privacy>
+      </mat-tab>
+      <mat-tab label="Timetable Management"> <app-register></app-register> </mat-tab>
+      <mat-tab label="Academic"> <app-register></app-register> </mat-tab>
+
+      <mat-tab label="Certificates"> <app-register></app-register> </mat-tab>
+
+      <mat-tab label="Health"> <app-register></app-register> </mat-tab>
+      <mat-tab label="Event & Activity Management">
+        <div>
+          <mat-card [@fallIn]='state'>
+            <mat-card-content>
+              <div *ngIf="(toggleField=='searchMode') else (toggleField=='addMode')? showAddMode : ((toggleField=='editMode')? showEditMode : showResMode)">
+                <!-- searchmode -->
+                <form #searchFormData="ngForm" class="example-form">
+                  <mat-card-actions align="start">
+                    <button type="button" (click)="toggle('resMode');getData(searchFormData.value);" mat-raised-button [disabled]="(code.value == '' && descr.value == '')"
+                            color="primary">
+                      Search
+                    </button>
+                    <span class="med-spacer"></span>
+                    <span matTooltip="Add New">
+                      <mat-icon color="primary" (click)="toggle('addMode')" svgIcon="add"></mat-icon>
+                    </span>
+                    <span class="small-spacer"></span>
+                    <span matTooltip="Show Recent Results">
+                      <mat-icon color="primary" (click)="toggle('resMode');getData();" svgIcon="cached"></mat-icon>
+                    </span>
+                  </mat-card-actions>
+                  <mat-form-field class="example-form">
+                    <input matInput type="text" placeholder="Employee ID" id="code" name="code" #code="ngModel" ngModel>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-form">
+                    <input matInput type="text" placeholder="Employee First Name" id="descr" name="descr" #descr="ngModel" ngModel>
+                  </mat-form-field>
+                </form>
+              </div>
+            </mat-card-content>
+          </mat-card>
+          <!-- addMode -->
+          <ng-template #showAddMode>
+            <form #addDataForm="ngForm" (ngSubmit)="setData(addDataForm.value);" novalidate>
+              <mat-error *ngIf="savedChanges">
+                Data is saved.
+                <label class="small-spacer"></label>
+                <mat-icon (click)="this.addDataForm.reset();savedChanges=false;toggle('searchMode');" svgIcon="clear"></mat-icon>
+              </mat-error>
+              <div *ngIf="!savedChanges">
+                <mat-progress-bar mode="indeterminate" *ngIf="dataLoading"></mat-progress-bar>
+                <mat-error *ngIf="error">Error: {{ errorMessage }}</mat-error>
+                <mat-card-actions align="start">
+                  <button type="submit" mat-raised-button [disabled]="!addDataForm.valid" color="primary">Add</button>
+                  <button type="reset" (click)="this.addDataForm.reset();" mat-raised-button [disabled]="!addDataForm.valid" color="primary">Clear</button>
+                  <span class="med-spacer"></span>
+                  <span matTooltip="Search">
+                    <mat-icon color="primary" (click)="toggle('searchMode')" svgIcon="search"></mat-icon>
+                  </span>
+                  <span class="small-spacer"></span>
+                  <span matTooltip="Show Recent Results">
+                    <mat-icon color="primary" (click)="toggle('resMode');getData();" svgIcon="cached"></mat-icon>
+                  </span>
+                </mat-card-actions>
+                <mat-accordion>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header style="background-color:aliceblue;">
+                      <mat-panel-title>
+                        Personal dataaa (*)
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        Name and Personal Information
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <mat-form-field>
+                      <input matInput placeholder="Employee ID" name="code" id="code" ngModel required minlength="2">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Employee Secret Key" name="SKEY" id="SKEY" ngModel required minlength="2">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="First name" name="descr" id="descr" ngModel required minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Middle name" name="MIDDLE_NAME" id="MIDDLE_NAME" ngModel minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Last name" name="LAST_NAME" id="LAST_NAME" ngModel required minlength="4">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Date of Birth" type="date" name="DOB" id="DOB" ngModel required>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Father's name" name="FATHER_NAME" id="FATHER_NAME" ngModel minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Mother's name" name="MOTHER_NAME" id="MOTHER_NAME" ngModel minlength="4">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Spouse's name" name="SPOUSE_NAME" id="SPOUSE_NAME" ngModel minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Spouse Date of Birth" type="date" name="SDOB" id="SDOB" ngModel>
+                    </mat-form-field>
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Address
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        Contact Details
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <mat-form-field>
+                      <input matInput placeholder="Address Type" name="ADD_TYPE_1" id="ADD_TYPE_1" ngModel minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Address Line 1" name="ADD_LINE_1" id="ADD_LINE_1" ngModel minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Address Line 2" name="ADD_LINE_2" id="ADD_LINE_2" ngModel>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Pin Code" name="PIN_CODE" id="PIN_CODE" ngModel>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="State" name="STATE" id="STATE" ngModel>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Country" name="COUNTRY" id="COUNTRY" ngModel>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Address Type (2)" name="ADD_TYPE_2" id="ADD_TYPE_2" ngModel minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Address Line 1" name="ADD_LINE_12" id="ADD_LINE_12" ngModel minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Address Line 2" name="ADD_LINE_22" id="ADD_LINE_22" ngModel>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Pin Code" name="PIN_CODE2" id="PIN_CODE2" ngModel>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="State" name="STATE2" id="STATE2" ngModel>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Country" name="COUNTRY2" id="COUNTRY2" ngModel>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Mobile 1" name="MOBILE1" id="MOBILE1" ngModel phone minlength="10">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Mobile 2" name="MOBILE2" id="MOBILE2" ngModel phone minlength="10">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Email 1" name="EMAIL1" id="EMAIL1" ngModel phone minlength="10">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Email 2" name="EMAIL2" id="EMAIL2" ngModel phone minlength="10">
+                    </mat-form-field>
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Qualifications
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        Performance Details
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <mat-form-field>
+                      <input matInput placeholder="Degree(s)" name="DEGREE" id="DEGREE" ngModel minlength="4">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Last College Attended" name="COLLEGE" id="COLLEGE" ngModel minlength="4">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="College Address Line 1" name="ADD_LINE_C1" id="ADD_LINE_C1" ngModel minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="College Address Line 2" name="ADD_LINE_C2" id="ADD_LINE_C2" ngModel>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="College Pin Code" name="PIN_CODE_C" id="PIN_CODE_C" ngModel>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="College State" name="STATE_C" id="STATE_C" ngModel>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="College Country" name="COUNTRY_C" id="COUNTRY_C" ngModel>
+                    </mat-form-field>
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        References
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        References Details
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <mat-form-field>
+                      <input matInput placeholder="Reference 1" name="REFERENCE_1" id="REFERENCE_1" ngModel minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Reference 1 Address" name="REFERENCE_1_ADD" id="REFERENCE_1_ADD" ngModel minlength="4">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Reference 2" name="REFERENCE_2" id="REFERENCE_2" ngModel minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Reference 2 Address" name="REFERENCE_2_ADD" id="REFERENCE_2_ADD" ngModel minlength="4">
+                    </mat-form-field>
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        HR (*)
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        Compensation Details
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <mat-form-field>
+                      <mat-select placeholder="Salary Code" name="SALARY_CODE" id="SALARY_CODE" ngModel required>
+                        <mat-option *ngFor="let code of salCDs$" [value]="code._id">
+                          {{ code.code }} - {{ code.descr }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </mat-expansion-panel>
+                </mat-accordion>
+              </div>
+            </form>
+          </ng-template>
+          <!-- edit mode -->
+          <ng-template #showEditMode>
+            <form #editDataForm="ngForm" (ngSubmit)="updateData(editDataForm.value);" novalidate>
+              <input type="hidden" name="_id" id="_id" [ngModel]="(data$ | async)?._id" required>
+              <mat-error *ngIf="savedChanges">
+                Data is saved.
+                <label class="small-spacer"></label>
+                <mat-icon (click)="this.editDataForm.reset();savedChanges=false;toggle('searchMode');" svgIcon="clear"></mat-icon>
+              </mat-error>
+              <div *ngIf="!savedChanges">
+                <mat-progress-bar mode="indeterminate" *ngIf="dataLoading"></mat-progress-bar>
+                <mat-error *ngIf="error">Error: {{ errorMessage }}</mat-error>
+                <mat-card-actions align="start">
+                  <button type="submit" mat-raised-button [disabled]="!this.editDataForm.valid || this.editDataForm.pristine" color="primary">Update</button>
+                  <span class="med-spacer"></span>
+                  <span matTooltip="Search">
+                    <mat-icon color="primary" (click)="toggle('searchMode')" svgIcon="search"></mat-icon>
+                  </span>
+                  <span class="small-spacer"></span>
+                  <span matTooltip="Shwo Recent Results">
+                    <mat-icon color="primary" (click)="toggle('resMode');getData();" svgIcon="cached"></mat-icon>
+                  </span>
+                </mat-card-actions>
+
+                <!--<div class="panel panel-info">
+            <div class="panel-heading">Student Management</div>
+            <div class="panel-body">-->
+
+                <mat-accordion>
+                  <mat-expansion-panel class="panel panel-info">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Personal dataEdit (*)
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        Name and Personal Information
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <mat-form-field>
+                      <input matInput placeholder="Employee ID" name="code" id="code" [ngModel]="(data$ | async)?.code" required minlength="2">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Employee Secret Key" name="SKEY" id="SKEY" [ngModel]="(data$ | async)?.SKEY" required minlength="2">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="First name" name="descr" id="descr" [ngModel]="(data$ | async)?.descr" required minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Middle name" name="MIDDLE_NAME" id="MIDDLE_NAME" [ngModel]="(data$ | async)?.MIDDLE_NAME" minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Last name" name="LAST_NAME" id="LAST_NAME" [ngModel]="(data$ | async)?.LAST_NAME" required minlength="4">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Date of Birth" type="date" name="DOB" id="DOB" [ngModel]="(data$ | async)?.DOB" required>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Father's name" name="FATHER_NAME" id="FATHER_NAME" [ngModel]="(data$ | async)?.FATHER_NAME" minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Mother's name" name="MOTHER_NAME" id="MOTHER_NAME" [ngModel]="(data$ | async)?.MOTHER_NAME" minlength="4">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Spouse's name" name="SPOUSE_NAME" id="SPOUSE_NAME" [ngModel]="(data$ | async)?.SPOUSE_NAME" minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Spouse Date of Birth" type="date" name="SDOB" id="SDOB" [ngModel]="(data$ | async)?.SDOB">
+                    </mat-form-field>
+                  </mat-expansion-panel>
+                  <mat-expansion-panel class="panel panel-info">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Address
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        Contact Details
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <mat-form-field>
+                      <input matInput placeholder="Address Type" name="ADD_TYPE_1" id="ADD_TYPE_1" [ngModel]="(data$ | async)?.ADD_TYPE_1" minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Address Line 1" name="ADD_LINE_1" id="ADD_LINE_1" [ngModel]="(data$ | async)?.ADD_LINE_1" minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Address Line 2" name="ADD_LINE_2" id="ADD_LINE_2" [ngModel]="(data$ | async)?.ADD_LINE_2">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Pin Code" name="PIN_CODE" id="PIN_CODE" [ngModel]="(data$ | async)?.PIN_CODE">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="State" name="STATE" id="STATE" [ngModel]="(data$ | async)?.STATE">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Country" name="COUNTRY" id="COUNTRY" [ngModel]="(data$ | async)?.COUNTRY">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Address Type (2)" name="ADD_TYPE_2" id="ADD_TYPE_2" [ngModel]="(data$ | async)?.ADD_TYPE_2" minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Address Line 1" name="ADD_LINE_12" id="ADD_LINE_12" [ngModel]="(data$ | async)?.ADD_LINE_12" minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Address Line 2" name="ADD_LINE_22" id="ADD_LINE_22" [ngModel]="(data$ | async)?.ADD_LINE_22">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Pin Code" name="PIN_CODE2" id="PIN_CODE2" [ngModel]="(data$ | async)?.PIN_CODE2">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="State" name="STATE2" id="STATE2" [ngModel]="(data$ | async)?.STATE2">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Country" name="COUNTRY2" id="COUNTRY2" [ngModel]="(data$ | async)?.COUNTRY2">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Mobile 1" name="MOBILE1" id="MOBILE1" [ngModel]="(data$ | async)?.MOBILE1" phone minlength="10">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Mobile 2" name="MOBILE2" id="MOBILE2" [ngModel]="(data$ | async)?.MOBILE2" phone minlength="10">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Email 1" name="EMAIL1" id="EMAIL1" [ngModel]="(data$ | async)?.EMAIL1" phone minlength="10">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Email 2" name="EMAIL2" id="EMAIL2" [ngModel]="(data$ | async)?.EMAIL2" phone minlength="10">
+                    </mat-form-field>
+                  </mat-expansion-panel>
+                  <mat-expansion-panel class="panel panel-info">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Qualifications
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        Performance Details
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <mat-form-field>
+                      <input matInput placeholder="Degree(s)" name="DEGREE" id="DEGREE" [ngModel]="(data$ | async)?.DEGREE" minlength="4">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Last College Attended" name="COLLEGE" id="COLLEGE" [ngModel]="(data$ | async)?.COLLEGE" minlength="4">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="College Address Line 1" name="ADD_LINE_C1" id="ADD_LINE_C1" [ngModel]="(data$ | async)?.ADD_LINE_C1" minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="College Address Line 2" name="ADD_LINE_C2" id="ADD_LINE_C2" [ngModel]="(data$ | async)?.ADD_LINE_C2">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="College Pin Code" name="PIN_CODE_C" id="PIN_CODE_C" [ngModel]="(data$ | async)?.PIN_CODE_C">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="College State" name="STATE_C" id="STATE_C" [ngModel]="(data$ | async)?.STATE_C">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="College Country" name="COUNTRY_C" id="COUNTRY_C" [ngModel]="(data$ | async)?.COUNTRY_C">
+                    </mat-form-field>
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        References
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        References Details
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <mat-form-field>
+                      <input matInput placeholder="Reference 1" name="REFERENCE_1" id="REFERENCE_1" [ngModel]="(data$ | async)?.REFERENCE_1" minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Reference 1 Address" name="REFERENCE_1_ADD" id="REFERENCE_1_ADD" [ngModel]="(data$ | async)?.REFERENCE_1_ADD" minlength="4">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <input matInput placeholder="Reference 2" name="REFERENCE_2" id="REFERENCE_2" [ngModel]="(data$ | async)?.REFERENCE_2" minlength="4">
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Reference 2 Address" name="REFERENCE_2_ADD" id="REFERENCE_2_ADD" [ngModel]="(data$ | async)?.REFERENCE_2_ADD" minlength="4">
+                    </mat-form-field>
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        HR (*)
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        Compensation Details
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <mat-form-field>
+                      <mat-select placeholder="Salary Code" name="SALARY_CODE" id="SALARY_CODE" [ngModel]="(data$ | async)?.SALARY_CODE" required>
+                        <mat-option *ngFor="let code of salCDs$" [value]="code._id">
+                          {{ code.code }} - {{ code.descr }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </mat-expansion-panel>
+                </mat-accordion>
+              </div>
+            </form>
+          </ng-template>
+          <!-- Results mode -->
+          <ng-template #showResMode>
+            <mat-card-actions align="start">
+              <span class="med-spacer"></span>
+              <span class="med-spacer"></span>
+              <span class="med-spacer"></span>
+              <span matTooltip="Add New">
+                <mat-icon color="primary" (click)="toggle('addMode')" svgIcon="add"></mat-icon>
+              </span>
+              <span class="small-spacer"></span>
+              <span matTooltip="Search All">
+                <mat-icon color="primary" (click)="toggle('searchMode')" svgIcon="search"></mat-icon>
+              </span>
+            </mat-card-actions>
+
+
+          </ng-template>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  
+
+
+</form>
+

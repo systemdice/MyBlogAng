@@ -1,118 +1,202 @@
-<!-- Toolbar -->
-<!--<div class="toolbar" role="banner" >
-  <img
-    width="40"
-    alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-  />
-  <span>Welcome to Debasmit Blog &nbsp;&nbsp;</span>
-</div>-->
-<body>
-  <div id="wrapper">
-    <div id="header">
-      <mat-toolbar color="primary" role="banner">
-        <mat-toolbar-row>
-          <mat-card>
-            <button mat-button [matMenuTriggerFor]="rootMenu">
-              <mat-icon>mood</mat-icon>
-              <img style="height:30px;width:30px;" src="../assets/images/hdfc1.png" />
-              <!--<img src="{{'data:image/jpg;base64,' + '../assets/images/Actor.png'}}" />-->
+<mat-sidenav-container fullscreen style="min-height: 100vh;">
+  <mat-sidenav mode="side" #sidenav opened position="start" style="width: 25vh;padding:0px;margin:0px;background-color:white;"  class="position-fixed">
+    <div fxLayout="column" style="overflow:hidden;">
+      <button mat-button [matMenuTriggerFor]="rootMenu" style="padding:0px;margin:0px;">
+        <!--<mat-icon>mood</mat-icon>-->
+        <img style="height:40px;width:20vh;padding:0px;margin:0px;" src="../assets/images/logo.png" />
+        <!--<img src="{{'data:image/jpg;base64,' + '../assets/images/Actor.png'}}" />-->
 
-            </button>
-            <mat-menu #rootMenu="matMenu">
-              <button mat-menu-item [matMenuTriggerFor]="subMenu1">Angular</button>
-              <button mat-menu-item [matMenuTriggerFor]="subMenu2">React</button>
-            </mat-menu>
+      </button>
 
-            <mat-menu #subMenu1="matMenu">
-              <button mat-menu-item>Angular 5</button>
-              <button mat-menu-item>Angular 6</button>
-            </mat-menu>
+      <hr style="width: 25vh;padding-top:1px;padding-bottom:0px;margin:0px" />
+      <div class="collapse show d-md-flex bg-light pt-2 pl-0 min-vh-100" id="sidebar">
+        <ul class="nav flex-column flex-nowrap overflow-hidden">
+          <li class="nav-item">
+            <a class="nav-link text-truncate" [routerLink]="'/home'"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Dashboard</a>
 
-            <mat-menu #subMenu2="matMenu">
-              <button mat-menu-item>React 16.0</button>
-              <button mat-menu-item>React 16.1</button>
-            </mat-menu>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-truncate" [routerLink]="'/privacy'"><i class="fa fa-home"></i> <span class="d-none d-sm-inline">Overview</span></a>
+          </li>
+          <li>
+            <a class="nav-link text-truncate" [routerLink]="'/UserSettings'">
+              <i class="glyphicon glyphicon-user"></i>
+              Settings
+            </a>
+          </li>
+          <li *ngIf="currentUser?.firstName == 'Anshika'">
+            
+            <a class="nav-link text-truncate" [routerLink]="'/office'">
+              <i class="glyphicon glyphicon-tasks"></i>
+              Office
+            </a>
+          </li> 
+          <li>
+            <a class="nav-link text-truncate" [routerLink]="'/students'">
+              <i class="glyphicon glyphicon-grain"></i>
+              Students
+            </a>
+          </li>
+          <li>
+            <a class="nav-link text-truncate" [routerLink]="'/term'">
+              <i class="glyphicon glyphicon-screenshot"></i>
+              Terms
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-truncate" [routerLink]="'/StudentRegister'"><i class="glyphicon glyphicon-ok"></i> <span class="d-none d-sm-inline">Product</span></a>
+          </li>
 
-          </mat-card>
-          <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
-            <mat-icon>menu</mat-icon>
-          </button>
-          <!--<button mat-icon-button>
-          <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+          <li class="nav-item">
+            <a class="nav-link collapsed text-truncate" href="#submenu1" data-toggle="collapse" data-target="#submenu1"><i class="fa fa-table"></i> <span class="d-none d-sm-inline">Reports</span></a>
+            <div class="collapse" id="submenu1" aria-expanded="false">
+              <ul class="flex-column pl-2 nav">
+                <li class="nav-item"><a class="nav-link py-0" href="#"><span>Orders</span></a></li>
+                <li class="nav-item">
+                  <a class="nav-link collapsed py-1" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub1"><span>Customers</span></a>
+                  <div class="collapse" id="submenu1sub1" aria-expanded="false">
+                    <ul class="flex-column nav pl-4">
+                      <li class="nav-item">
+                        <a class="nav-link p-1" href="#">
+                          <i class="fa fa-fw fa-clock-o"></i> Daily
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link p-1" href="#">
+                          <i class="fa fa-fw fa-dashboard"></i> Dashboard
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link p-1" href="#">
+                          <i class="fa fa-fw fa-bar-chart"></i> Charts
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link p-1" href="#">
+                          <i class="fa fa-fw fa-compass"></i> Areas
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link text-truncate" href="#"><span class="glyphicon glyphicon-star">Analytics</span></a></li>
+          <li class="nav-item"><a class="nav-link text-truncate" href="#"><i class="fa fa-download"></i> <span class="d-none d-sm-inline">Export</span></a></li>
+        </ul>
+      </div>
+      <hr />
 
-        </button>-->
-          <span><span class="title">Welcome to Debasmit Blog &nbsp;&nbsp;</span></span>
-          <!--<span class="menu-spacer"></span>-->
-          <div fxShow="true" fxHide.lt-md style="float: left; display: inline-block;">
-            <!-- The following menu items will be hidden on both SM and XS screen sizes -->
-            <a mat-button [routerLink]="'/home'"> Home </a>
-            <a mat-button [routerLink]="'/about'"> About </a>
-            <a mat-button [routerLink]="'/term'"> Term </a>
-          </div>
-
-          <span class="toolbar-filler"></span>
-
-          <!--<span>{{ time | date: 'hh:mm:ss a' }}</span>-->
-          <button mat-icon-button (click)="sidenav.toggle()" class="mat-icon-button sidenav-toggle-button" [hidden]="!sidenav.opened">
-            <mat-icon aria-label="Menu" class="material-icons">close</mat-icon>
-          </button>
-          <!--<mat-icon>notifications_off</mat-icon>-->
-          <mat-icon>poll</mat-icon>
-          <mat-icon>person</mat-icon><span style="font-style:normal;font-size:small;">{{currentUser?.firstName}}</span>
-          <!--<a class="nav-item nav-link" (click)="logout()">Logout</a>-->
-          <button id="button-logout" mat-button (click)="logout()">Log Out</button>
-          <!--<flag-icon country="fr"></flag-icon>-->
-          <span class="flag-icon flag-icon-in flag-icon-squared"></span>
 
 
+      <mat-menu #rootMenu="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="subMenu1">Angular</button>
+        <button mat-menu-item [matMenuTriggerFor]="subMenu2">React</button>
+      </mat-menu>
 
-        </mat-toolbar-row>
-      </mat-toolbar>
+      <mat-menu #subMenu1="matMenu">
+        <button mat-menu-item>Angular 5</button>
+        <button mat-menu-item>Angular 6</button>
+      </mat-menu>
+
+      <mat-menu #subMenu2="matMenu">
+        <button mat-menu-item>React 16.0</button>
+        <button mat-menu-item>React 16.1</button>
+      </mat-menu>
     </div>
-    <mat-sidenav-container>
-      <mat-sidenav #sidenav mode="side" opened role="navigation" style="width: 21.69vh;" color="primary">
-        <a mat-list-item class="sidenav-link" [routerLink]="['/home']">
-          <div style="display: inline-flex;    vertical-align: middle;">
-            <mat-icon mat-list-icon>account_balance</mat-icon>
-            <span class="title" mat-line>Home</span>
-          </div>
 
+  </mat-sidenav>
+  <mat-sidenav-content style="display: flex;  flex-direction: column;  min-height: 100vh;">
 
-        </a>
-        <a mat-list-item class="sidenav-link" [routerLink]="['/about']">
-          <div style="display: inline-flex;    vertical-align: middle;">
-            <mat-icon mat-list-icon>android</mat-icon>
-            <span class="title" mat-line>About</span>
-            <span mat-line class="secondary"></span>
-          </div>
-        </a>
-        <a mat-list-item class="sidenav-link" [routerLink]="['/fullscreen1']" (click)="sidenav.toggle()">
-          <div style="display: inline-flex;    vertical-align: middle;">
-            <mat-icon mat-list-icon><i class="material-icons">panorama_wide_angle</i></mat-icon>
-            <span class="title" mat-line>fullscreen </span>
-          </div>
-        </a>
-      </mat-sidenav>
-      <mat-sidenav-content><router-outlet></router-outlet></mat-sidenav-content>
-    </mat-sidenav-container>
+    <mat-toolbar color="primary" style="height:42px;">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      MySchool &nbsp;<mat-icon>refresh</mat-icon>
 
-    
-    <div id="footer">
-      <label style="margin-bottom:10px;">This stays at the bottom of the page.</label>
-      <mat-icon style="vertical-align:middle">thumb_up_alt</mat-icon>
-      <mat-icon class="example-icon">favorite</mat-icon>
+      <div fxShow="true" fxHide.lt-md="true">
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
 
+        <a class="nav-link text-truncate" [routerLink]="['/home', 'User']" mat-button><i class="glyphicon glyphicon-tasks"></i>&nbsp;User Dashboard</a>
+        <a class="nav-link text-truncate" [routerLink]="['/home', 'Admin']"  mat-button><i class="glyphicon glyphicon-dashboard"></i>&nbsp;Admin Dashboard</a>
+        <a href="#" mat-button><i class="glyphicon glyphicon-calendar"></i>&nbsp;Calendar</a>
+      </div>
+      <span class="toolbar-spacer"></span>
+      <button mat-icon-button (click)="sidenav.toggle()" class="mat-icon-button sidenav-toggle-button" [hidden]="!sidenav.opened">
+        <mat-icon aria-label="Menu" class="material-icons">close</mat-icon>
+      </button>
+      <!--<mat-icon>notifications_off</mat-icon>-->
+      <mat-icon matBadge="4" matBadgeColor="accent">
+        notifications
+      </mat-icon>
+      <mat-icon>poll</mat-icon>
+      <mat-icon>person</mat-icon><span style="font-style:normal;font-size:small;">{{currentUser?.firstName}}</span>
+      <!--<a class="nav-item nav-link" (click)="logout()">Logout</a>-->
+      <button id="button-logout" mat-button (click)="logout()">Log Out</button>
+      <!--theme started-->
+      <button mat-icon-button id="theme-selector" [mat-menu-trigger-for]="themeMenu"
+              i18n-matTooltip="@@Select-a-theme" matTooltip="Select a theme!"
+              tabindex="-1">
+        <mat-icon class="auto-flip">format_color_fill</mat-icon>
+      </button>
+
+      <mat-menu #themeMenu="matMenu">
+        <mat-checkbox [checked]="isThemeDark"
+                      (click)="$event.stopPropagation()"
+                      (change)="toggleDarkness()"
+                      class="mat-menu-item theme-selector-is-dark" i18n="@@Dark">
+          Dark
+        </mat-checkbox>
+        {{themes}}
+        <mat-grid-list cols="4" rowHeight="100px">
+          <mat-grid-tile *ngFor="let tile of tiles"
+                         [colspan]="tile.cols"
+                         [rowspan]="tile.rows"
+                         [style.background]="tile.color">
+            {{tile.text}}
+          </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="2">
+          <mat-grid-tile *ngFor="let theme of themes">
+            <button (click)="setTheme(theme);" class="theme-selector btn btn-success"><span class="glyphicon glyphicon-off"></span> Login</button>
+            <button class="theme-selector btn btn-primary"
+                    (click)="setTheme(theme);"></button>{{theme}}
+            <div [attr.class]="theme + ' theme-primary center'">
+              <div [attr.class]="theme + ' theme-accent'"></div>
+              <div [attr.class]="theme + ' theme-warn'"></div>
+              <mat-icon *ngIf="activeTheme===theme" class="center theme-check">check</mat-icon>
+            </div>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </mat-menu>
+      <!--theme ended-->
+      <!--<flag-icon country="fr"></flag-icon>-->
+      <span class="flag-icon flag-icon-in flag-icon-squared"></span>
+    </mat-toolbar>
+    <div class="main-content" style="height: 520px;    overflow-y: auto;overflow-x:hidden; flex: 1;">
+
+      <router-outlet></router-outlet>
 
     </div>
-  </div>
-</body>
-  
 
 
+    <mat-toolbar color="primary" style="height:38px;">
+      <span style="color:white;font-size:xx-small;"> © 2020 Systemdice, all rights reserved. &nbsp;</span>
 
 
+      <span class="toolbar-spacer"></span>
+      <span style="color:white;font-size:xx-small;"> Version:2.8 | <b><u>Documentation</u></b> | &nbsp;</span>
+      <span style="color:yellow;font-size:xx-small;">
+        UPGRADE TO VERSION 3.1
+      </span>
+      &nbsp;<button type="button" class="btn btn-success btn-sm" style="padding:2px;margin:0px;">Follow</button>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
 
-
-
-
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
