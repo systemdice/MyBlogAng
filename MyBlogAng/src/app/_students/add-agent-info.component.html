@@ -1,14 +1,14 @@
-<form [formGroup]="addCusForm" (ngSubmit)="onFormSubmit(addCusForm.value)">
+<form [formGroup]="addCusForm" (ngSubmit)="onFormSubmit()">
 
   <div class="panel panel-default" style="overflow:hidden">
-    <div class="panel-heading">{{AddorEdit}} Student <span style="color:cornflowerblue"> {{data?.Name}}</span> (Identity No-<span style="color:cornflowerblue"> {{data?.id}}</span>)</div>
+    <div class="panel-heading">{{AddorEdit}} Student <span style="color:cornflowerblue"> {{data?.name}}</span> (Identity No-<span style="color:cornflowerblue"> {{data?.id}}</span>)</div>
     <div class="panel-body fixed-panel">
       <mat-grid-list cols="2" [cols]="breakpoint" rowHeight="70px" (window:resize)="onResize($event)">
 
         <mat-grid-tile>
           <div class="text-inside">
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="User Name" formControlName="Name">
+              <input matInput placeholder="User Name" formControlName="Name" [required]="addCusForm.get('Name').errors !== null && addCusForm.get('Name').errors.required">
             </mat-form-field>
           </div>
         </mat-grid-tile>
@@ -75,7 +75,7 @@
     </div>-->
 
 
-          <label formArrayName="hobbies" *ngFor="let order of addCusForm.controls.hobbies.controls; let i = index">
+          <label formArrayName="hobbies" *ngFor="let order of addCusForm.controls.hobbies['controls']; let i = index">
             <input type="checkbox" [formControlName]="i">
             {{studentHobbyData[i].name}}
           </label>
@@ -135,7 +135,7 @@
           <div class="text-inside">
             <div class="col-sm-4">
               <mat-form-field matTooltip="Joining Year (numeric)"   matTooltipPosition="left">
-                <input matInput type="number" placeholder="Joining Year" formControlName="joiningYear">
+                <input matInput type="text" placeholder="Joining Year" formControlName="joiningYear" (keypress)="onlyNumberKey($event)">
               </mat-form-field>
             </div>
             <div class="col-sm-4">

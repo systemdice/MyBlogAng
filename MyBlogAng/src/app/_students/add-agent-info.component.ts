@@ -168,7 +168,7 @@ studentHobbyData: any[] = [
       //hobbies: this.fb.array([]),
       hobbies: new FormArray(this.controls),
       contactNumber: ['', [Validators.required]],
-      joiningYear: ['', Validators.maxLength(10)],
+      joiningYear: ['', Validators.maxLength(4)],
       schoolYear: ['', [Validators.required]],
       studentType: ['', [Validators.required]],
       emailAddress: ['', [Validators.required]],
@@ -208,6 +208,10 @@ studentHobbyData: any[] = [
       //alert(JSON.stringify(this.data.row));
       //alert(this.data.row.id ='---'+ this.data.id);
     }
+  }
+
+  onlyNumberKey(event) {
+    return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57;
   }
 
   createHobbies(hobbiesInputs) {

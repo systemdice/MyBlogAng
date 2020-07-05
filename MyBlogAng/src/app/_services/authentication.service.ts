@@ -33,6 +33,8 @@ export class AuthenticationService {
                 if (user.username == username && user.password == password) {
                     // store user details and jwt token in local storage to keep user logged in between page refreshes
                   localStorage.setItem('currentUser', JSON.stringify(user));
+                  //localStorage.setItem('LoginStatus', 'Yes');
+                  //alert(JSON.stringify(user))
                   localStorage.setItem('Role', user.username == 'Anshu' ?'Admin':'user');
                     this.currentUserSubject.next(user);
                 }

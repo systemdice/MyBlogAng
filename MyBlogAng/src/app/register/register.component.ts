@@ -96,9 +96,9 @@ export class RegisterComponent implements OnInit {
     this.loadData();
   }
 
-  addNew(issue: Issue) {
+  addNew() {
     const dialogRef = this.dialog.open(AddAgentComponent, {
-      data: { issue: issue }
+      data: {  }
     });
 
     dialogRef.afterClosed().subscribe(result => {

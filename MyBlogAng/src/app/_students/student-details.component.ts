@@ -172,7 +172,10 @@ export class StudentDetailsComponent implements OnInit
     this.dataSource.filter = filterValue;
   }
 
-  exportCsv(exportCsv):void {
+  exportCsv(abc:any):void {
+
+  }
+  exportExcel(abc:any): void {
 
   }
 
@@ -182,7 +185,7 @@ export class StudentDetailsComponent implements OnInit
     //alert(JSON.stringify( row));
     this.id = id;
     const dialogRef = this.dialog.open(AddAgentInfoComponent, {
-      width: '640px', height: '600px', disableClose: true, data: { id: id, Name: Name, category: Category, row: row, AddEdit:'Edit',User:User}
+      width: '640px', height: '600px', disableClose: true, data: { id: id, name: Name, category: Category, row: row, AddEdit:'Edit',User:User}
     });
 
     dialogRef.afterClosed().subscribe(result => {

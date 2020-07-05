@@ -1,10 +1,11 @@
 import { Component, OnInit, OnDestroy, HostBinding } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { AuthenticationService } from './_services';
+import { AuthenticationService, UserService } from './_services';
 import { User } from './_models';
 import { Subscription } from 'rxjs';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { OverlayContainer } from '@angular/cdk/overlay';
+import { GlobalConstants } from './shared/global-constants';
 
 const THEME_DARKNESS_SUFFIX = `-dark`;
 
@@ -27,7 +28,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy {
-
+  
   themes: string[] = [
     "deeppurple-amber",
     "indigo-pink",
@@ -82,7 +83,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
 
   constructor(
-    private router: Router,
+    private router: Router, public userService: UserService,
     private authenticationService: AuthenticationService, public matDialog: MatDialog, private overlayContainer: OverlayContainer
   ) {
     //this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
@@ -99,8 +100,10 @@ export class AppComponent implements OnInit, OnDestroy {
   }
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
-
+  LoginValue: string = "No";
   ngOnInit() {
+    //localStorage.setItem('LoginStatus', 'No');
+    this.LoginValue = localStorage.getItem('LoginStatus');
     this.timer = setInterval(() => {
       this.time = new Date();
       
@@ -119,7 +122,9 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   logout() {
-    
+    localStorage.setItem('LoginStatus', 'No');
+    this.userService.rolel = 'No';
+    this.LoginValue = localStorage.getItem('LoginStatus');
     if (this.currentUser != null) {
       this.currentUser.firstName = "";
     }

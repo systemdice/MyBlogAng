@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
-import { AlertService, AuthenticationService } from '../_services';
+import { AlertService, AuthenticationService, UserService } from '../_services';
 
 @Component({templateUrl: 'login.component.html'})
 export class LoginComponent implements OnInit {
@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
         private route: ActivatedRoute,
         private router: Router,
         private authenticationService: AuthenticationService,
-        private alertService: AlertService
+      private alertService: AlertService, private userService: UserService
     ) {
         // redirect to home if already logged in
         if (this.authenticationService.currentUserValue) { 
@@ -27,8 +27,8 @@ export class LoginComponent implements OnInit {
 
     ngOnInit() {
         this.loginForm = this.formBuilder.group({
-            username: ['Anshu', Validators.required],
-            password: ['abc123', Validators.required]
+            username: ['anshu', Validators.required],
+            password: ['1234', Validators.required]
         });
 
         // get return url from route parameters or default to '/'
@@ -51,6 +51,8 @@ export class LoginComponent implements OnInit {
             //.pipe(first())
             .subscribe(
           data => {
+            localStorage.setItem('LoginStatus', 'Yes');
+            this.userService.rolel = 'Yes';
             //localStorage.removeItem('Role');
             //if (this.f.username.value == 'Anshu') {
             //  localStorage.setItem('Role', 'Admin');

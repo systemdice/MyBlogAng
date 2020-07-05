@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 @Injectable({ providedIn: 'root' })
 export class UserService {
   //settings: AppSettings;
+  rolel: string = 'No';
   apiURL = GlobalConstants.apiURL;
   apiURLUptoAPI = GlobalConstants.apiURLUptoAPI;
   constructor(private http: HttpClient) { }

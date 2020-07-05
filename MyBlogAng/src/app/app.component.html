@@ -1,15 +1,15 @@
 <mat-sidenav-container fullscreen style="min-height: 100vh;">
   <mat-sidenav mode="side" #sidenav opened position="start" style="width: 25vh;padding:0px;margin:0px;background-color:white;"  class="position-fixed">
-    <div fxLayout="column" style="overflow:hidden;">
+    <div fxLayout="column" style="overflow:hidden;"  >
       <button mat-button [matMenuTriggerFor]="rootMenu" style="padding:0px;margin:0px;">
         <!--<mat-icon>mood</mat-icon>-->
-        <img style="height:40px;width:20vh;padding:0px;margin:0px;" src="../assets/images/logo.png" />
+        <img style="height:40px;width:20vh;padding:0px;margin:0px;" src="assets/images/logo.png" />
         <!--<img src="{{'data:image/jpg;base64,' + '../assets/images/Actor.png'}}" />-->
 
       </button>
 
       <hr style="width: 25vh;padding-top:1px;padding-bottom:0px;margin:0px" />
-      <div class="collapse show d-md-flex bg-light pt-2 pl-0 min-vh-100" id="sidebar">
+      <div class="collapse show d-md-flex bg-light pt-2 pl-0 min-vh-100" id="sidebar" *ngIf="userService.rolel == 'Yes'">
         <ul class="nav flex-column flex-nowrap overflow-hidden">
           <li class="nav-item">
             <a class="nav-link text-truncate" [routerLink]="'/home'"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Dashboard</a>
@@ -113,14 +113,14 @@
       <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-      MySchool &nbsp;<mat-icon>refresh</mat-icon>
+      Tool &nbsp;<mat-icon>refresh</mat-icon>
 
       <div fxShow="true" fxHide.lt-md="true">
         <!-- The following menu items will be hidden on both SM and XS screen sizes -->
 
-        <a class="nav-link text-truncate" [routerLink]="['/home', 'User']" mat-button><i class="glyphicon glyphicon-tasks"></i>&nbsp;User Dashboard</a>
-        <a class="nav-link text-truncate" [routerLink]="['/home', 'Admin']"  mat-button><i class="glyphicon glyphicon-dashboard"></i>&nbsp;Admin Dashboard</a>
-        <a href="#" mat-button><i class="glyphicon glyphicon-calendar"></i>&nbsp;Calendar</a>
+        <a class="nav-link text-truncate" [routerLink]="['/home', 'User']" mat-button *ngIf="userService.rolel == 'Yes'"><i class="glyphicon glyphicon-tasks" ></i>&nbsp;User Dashboard</a>
+        <a class="nav-link text-truncate" [routerLink]="['/home', 'Admin']"  mat-button *ngIf="userService.rolel == 'Yes'"><i class="glyphicon glyphicon-dashboard"></i>&nbsp;Admin Dashboard</a>
+        <!--<a href="#" mat-button><i class="glyphicon glyphicon-calendar"></i>&nbsp;Calendar</a>-->
       </div>
       <span class="toolbar-spacer"></span>
       <button mat-icon-button (click)="sidenav.toggle()" class="mat-icon-button sidenav-toggle-button" [hidden]="!sidenav.opened">
@@ -183,7 +183,7 @@
 
 
     <mat-toolbar color="primary" style="height:38px;">
-      <span style="color:white;font-size:xx-small;"> © 2020 Systemdice, all rights reserved. &nbsp;</span>
+      <span style="color:white;font-size:xx-small;"> © 2020 Systemdice, all rights reserved. &nbsp;</span> 
 
 
       <span class="toolbar-spacer"></span>
